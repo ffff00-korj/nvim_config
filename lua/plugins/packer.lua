@@ -6,10 +6,10 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
-    use {
-        'doums/darcula',
-        config = function() vim.cmd('colorscheme darcula') end
-    }
+    -- use {
+    --     'doums/darcula',
+    --     config = function() vim.cmd('colorscheme darcula') end
+    -- }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
@@ -39,6 +39,11 @@ return require('packer').startup(function(use)
         requires = "nvim-tree/nvim-web-devicons",
     }
     use "lukas-reineke/indent-blankline.nvim"
+    use {
+        'Mofiqul/dracula.nvim',
+        config = function() vim.cmd('colorscheme dracula') end
+    }
+    -- use 'Mofiqul/dracula.nvim'
     use {
         'numToStr/Comment.nvim',
         config = function()
