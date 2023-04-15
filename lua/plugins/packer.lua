@@ -2,6 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = { { 'nvim-lua/plenary.nvim' } }
@@ -35,17 +36,7 @@ return require('packer').startup(function(use)
         requires = "nvim-tree/nvim-web-devicons",
     }
     use "lukas-reineke/indent-blankline.nvim"
-    use{'projekt0n/github-nvim-theme'}
-    -- use {
-    --     'doums/darcula',
-    --     config = function() vim.cmd('colorscheme darcula') end
-    -- }
-    -- use {
-    --     'Mofiqul/dracula.nvim',
-    --     config = function() vim.cmd('colorscheme dracula') end
-    -- }
-    -- use 'Mofiqul/dracula.nvim'
-    use {
+   use {
         'numToStr/Comment.nvim',
         config = function()
             require('Comment').setup()
