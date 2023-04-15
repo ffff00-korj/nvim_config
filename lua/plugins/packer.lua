@@ -35,13 +35,7 @@ return require('packer').startup(function(use)
         requires = "nvim-tree/nvim-web-devicons",
     }
     use "lukas-reineke/indent-blankline.nvim"
-    use({
-        'projekt0n/github-nvim-theme',
-        tag = 'v0.0.7',
-        config = function()
-            vim.cmd('colorscheme github_dark')
-        end
-    })
+    use{'projekt0n/github-nvim-theme'}
     -- use {
     --     'doums/darcula',
     --     config = function() vim.cmd('colorscheme darcula') end

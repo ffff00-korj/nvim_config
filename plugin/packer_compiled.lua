@@ -121,7 +121,6 @@ _G.packer_plugins = {
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["github-nvim-theme"] = {
-    config = { "\27LJ\2\n;\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\28colorscheme github_dark\bcmd\bvim\0" },
     loaded = true,
     path = "/home/ilya/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
     url = "https://github.com/projekt0n/github-nvim-theme"
@@ -223,10 +222,6 @@ time([[Defining packer_plugins]], false)
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
--- Config for: github-nvim-theme
-time([[Config for github-nvim-theme]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\28colorscheme github_dark\bcmd\bvim\0", "config", "github-nvim-theme")
-time([[Config for github-nvim-theme]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
