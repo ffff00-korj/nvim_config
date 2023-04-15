@@ -56,4 +56,9 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 end)
