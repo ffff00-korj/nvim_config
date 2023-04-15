@@ -36,12 +36,13 @@ return require('packer').startup(function(use)
     }
     use "lukas-reineke/indent-blankline.nvim"
     use({
-        'projekt0n/github-nvim-theme', tag = 'v0.0.7',
+        'projekt0n/github-nvim-theme',
+        tag = 'v0.0.7',
         config = function()
             vim.cmd('colorscheme github_dark')
         end
     })
-     -- use {
+    -- use {
     --     'doums/darcula',
     --     config = function() vim.cmd('colorscheme darcula') end
     -- }
@@ -56,9 +57,10 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
-    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+    use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+    use {'lewis6991/gitsigns.nvim'}
 end)
