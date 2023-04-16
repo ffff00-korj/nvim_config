@@ -1,8 +1,14 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
-    use { "ellisonleao/gruvbox.nvim" }
+    use('wbthomason/packer.nvim')
+    use({
+        'ellisonleao/gruvbox.nvim',
+        as = 'gruvbox',
+        config = function()
+            vim.cmd.colorscheme('gruvbox')
+        end
+    })
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = { { 'nvim-lua/plenary.nvim' } }
@@ -36,7 +42,7 @@ return require('packer').startup(function(use)
         requires = "nvim-tree/nvim-web-devicons",
     }
     use "lukas-reineke/indent-blankline.nvim"
-   use {
+    use {
         'numToStr/Comment.nvim',
         config = function()
             require('Comment').setup()
@@ -47,5 +53,5 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
-    use {'lewis6991/gitsigns.nvim'}
+    use { 'lewis6991/gitsigns.nvim' }
 end)
