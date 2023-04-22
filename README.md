@@ -1,9 +1,15 @@
-# nvim_config
-my neovim config
+# About
+My personal NeoVim config. It contains:
+* Theme
+* Lsp and lsp config
+* Treesitter
+* Telescope
+* Git intergration
+* and more..
 
-## Installation
+# Installation
 ```sh
-# clone installer
+# clone Packer installer
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 # run installation Packer script
