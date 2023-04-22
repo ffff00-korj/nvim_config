@@ -1,5 +1,5 @@
 # About
-My personal NeoVim config, written in lua. It contains:
+My personal NeoVim configuration, written in lua. It contains:
 * Theme
 * Lsp and lsp config
 * Treesitter
