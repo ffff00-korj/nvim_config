@@ -5,7 +5,7 @@ My personal NeoVim config, written in lua. It contains:
 * Treesitter
 * Telescope
 * Git intergration
-* and more..
+* and more in "lua/core/packer.lua"..
 
 # Installation
 ```sh
