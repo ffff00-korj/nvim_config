@@ -1,2 +1,24 @@
-# nvim_config
-my neovim config
+# About
+My personal NeoVim configuration, written in lua. It contains:
+* Theme
+* Lsp and lsp config
+* Treesitter
+* Telescope
+* Git intergration
+* God-loved harpoon
+* And more in "lua/core/packer.lua"..
+
+# Installation
+```sh
+# clone Packer installer
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+
+# run installation Packer script
+~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+# run NeoVim
+nvim .
+
+# type this in normal mode to install plugins
+:PackerSync
+```
