@@ -61,4 +61,11 @@ return require('packer').startup(function(use)
             require("nvim-surround").setup({})
         end
     })
+    use {
+        "rcarriga/nvim-dap-ui",
+        requires = {
+            "mfussenegger/nvim-dap",
+            "mfussenegger/nvim-dap-python",
+        },
+    }
 end)
