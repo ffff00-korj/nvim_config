@@ -6,8 +6,11 @@ vim.keymap.set("n", "<F2>", ":DapStepOver<CR>")
 vim.keymap.set("n", "<F3>", ":DapStepInto<CR>")
 vim.keymap.set("n", "<F4>", ":DapStepOut<CR>")
 vim.keymap.set("n", "<F5>", ":DapContinue<CR>")
-
 vim.keymap.set("n", "<F10>", ":lua require('dapui').toggle()<CR>")
+
+-- only for python
+vim.keymap.set("n", "<leader>dn", ":lua require('dap-python').test_method()<CR>")
+vim.keymap.set("n", "<leader>df", ":lua require('dap-python').test_class()<CR>")
 
 local dap, dapui = require('dap'), require("dapui")
 
