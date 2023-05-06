@@ -9,14 +9,29 @@ vim.keymap.set("n", "<F5>", ":DapContinue<CR>")
 
 vim.keymap.set("n", "<F10>", ":lua require('dapui').toggle()<CR>")
 
-local dap = require('dap')
+local dap, dapui = require('dap'), require("dapui")
+
+dap.listeners.after.event_initialized["dapui_config"] = function()
+    dapui.open()
+end
+
+dap.listeners.before.event_terminated["dapui_config"] = function()
+    dapui.close()
+end
+
+dap.listeners.before.event_exited["dapui_config"] = function()
+    dapui.close()
+end
 
 table.insert(dap.configurations.python, {
     name = 'Django',
     type = 'python',
     request = 'launch',
     stopOnEntry = false,
-    program = '${workspaceFolder}/manage.py',
+    program = function()
+        return vim.fn.getcwd() .. '/' .. vim.fn.input('Django project name: ') .. '/manage.py'
+    end,
+    cwd = '${workspaceFolder}',
     args = {
         "runserver",
         "--no-color",
