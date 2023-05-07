@@ -7,6 +7,7 @@ My personal NeoVim configuration, written in lua. It contains:
 * Git intergration
 * God-loved harpoon
 
+```sh
 # run NeoVim
 nvim .
 
