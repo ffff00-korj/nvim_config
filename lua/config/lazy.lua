@@ -11,6 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- need to set up this before lazy load plugins
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
