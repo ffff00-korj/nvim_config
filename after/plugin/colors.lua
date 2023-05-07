@@ -1,14 +1,14 @@
 function SetColor(color)
-    color = color or "gruvbox"
+    color = color or 'gruvbox'
     vim.cmd.colorscheme(color)
 end
 
-require("gruvbox").setup({
+require('gruvbox').setup({
     palette_overrides = {
         -- background
-        dark0 = "#1d1f21",
+        dark0 = '#1d1f21',
         -- colomn
-        dark1 = "#1d1f21",
+        dark1 = '#1d1f21',
     },
 })
 SetColor()
