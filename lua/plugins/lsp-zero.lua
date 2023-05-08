@@ -40,7 +40,6 @@ return {
     config = function()
         local lsp = require('lsp-zero')
         lsp.preset('recommended')
-        vim.diagnostic.config({ virtual_text = true, })
 
         lsp.on_attach(function(client, bufnr)
             lsp.default_keymaps({ buffer = bufnr })
@@ -52,10 +51,11 @@ return {
         end)
 
         lsp.set_sign_icons({
-            error = '',
-            warn = ' ',
-            hint = '',
-            info = ''
+            error = '',
+            warning = '',
+            hint = '',
+            information = '',
+            other = '﫠',
         })
 
 
@@ -95,7 +95,7 @@ return {
                 completion = cmp.config.window.bordered(),
             },
             mapping = {
-                ['<Enter>'] = cmp.mapping.confirm({ select = true }),
+                ['<CR>'] = cmp.mapping.confirm({ select = true }),
             },
             formatting = {
                 fields = { 'abbr', 'kind', 'menu' },
