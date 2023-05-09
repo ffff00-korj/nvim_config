@@ -5,7 +5,7 @@ return {
         { 'nvim-lua/plenary.nvim' }
     },
     opts = function()
-        return require('plugins.configs._telescope')
+        return require('plugins.telescope.chad_config')
     end,
     config = function(_, opts)
         require('telescope').setup(opts)
