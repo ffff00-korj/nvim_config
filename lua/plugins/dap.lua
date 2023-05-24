@@ -3,22 +3,34 @@ return {
     dependencies = {
         'mfussenegger/nvim-dap',
         'mfussenegger/nvim-dap-python',
+        'nvim-neotest/neotest',
+        'nvim-neotest/neotest-python',
+        'AckslD/swenv.nvim',
+        'stevearc/dressing.nvim',
     },
     keys = {
-        { '<F1>',       ':DapToggleBreakpoint<CR>' },
-        { '<F2>',       ':DapStepOver<CR>' },
-        { '<F3>',       ':DapStepInto<CR>' },
-        { '<F4>',       ':DapStepOut<CR>' },
-        { '<F5>',       ':DapContinue<CR>' },
-        { '<F10>',      ':lua require("dapui").toggle()<CR>' },
-        -- only for python
-        { '<leader>dn', ':lua require("dap-python").test_method()<CR>' },
-        { '<leader>df', ':lua require("dap-python").test_class()<CR>' },
+        { 'dc',          ':DapStepOver<CR>' },
+        { 'di',          ':DapStepInto<CR>' },
+        { 'do',          ':DapStepOut<CR>' },
+        { '<leader>dt',  ':DapToggleBreakpoint<CR>' },
+        { '<leader>dc',  ':DapContinue<CR>' },
+        { '<leader>dui', ':lua require("dapui").toggle()<CR>' },
+        { '<leader>dm',  '<cmd>lua require("neotest").run.run()<cr>' },
+        { '<leader>dM',  "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>" },
+        { '<leader>df',  "<cmd>lua require('neotest').run.run({vim.fn.expand('%')})<cr>" },
+        { '<leader>dF',  "<cmd>lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap'})<cr>" },
+        { '<leader>dS',  "<cmd>lua require('neotest').summary.toggle()<cr>" },
+        { '<leader>dC',  "<cmd>lua require('swenv.api').pick_venv()<cr>" },
     },
     config = function()
-        require('dap-python').setup()
+        local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
+        pcall(function()
+            require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
+        end)
+        require('swenv').setup({
+            venvs_path = vim.fn.expand('~/.pyenv/versions/*/envs/')
+        })
         require('dapui').setup()
-
         local dap, dapui = require('dap'), require('dapui')
 
         dap.listeners.after.event_initialized['dapui_config'] = function()
@@ -32,24 +44,17 @@ return {
         dap.listeners.before.event_exited['dapui_config'] = function()
             dapui.close()
         end
-
-        table.insert(dap.configurations.python, {
-            name = 'Django',
-            type = 'python',
-            request = 'launch',
-            stopOnEntry = false,
-            program = function()
-                return vim.fn.getcwd() .. '/' .. vim.fn.input('Django project name: ') .. '/manage.py'
-            end,
-            cwd = '${workspaceFolder}',
-            args = {
-                'runserver',
-                '--no-color',
-                '--noreload',
-            },
-            debugOptions = {
-                'RedirectOutput',
-                'DjangoDebugging'
+        require('dap.ext.vscode').load_launchjs()
+        require("neotest").setup({
+            adapters = {
+                require("neotest-python")({
+                    dap = {
+                        justMyCode = false,
+                        console = "integratedTerminal",
+                    },
+                    args = { "--log-level", "DEBUG", "--quiet" },
+                    runner = "pytest",
+                })
             }
         })
     end
