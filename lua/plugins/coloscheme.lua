@@ -30,7 +30,7 @@ local vscode = {
         vim.o.background = 'dark'
         require('vscode').setup({
             -- style = 'light'
-            -- transparent = true,
+            transparent = true,
             italic_comments = true,
             disable_nvimtree_bg = true,
         })
