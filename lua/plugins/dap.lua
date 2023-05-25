@@ -17,6 +17,9 @@ return {
         pcall(function()
             require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
         end)
+        local dap = require('dap')
+        dap.configurations.python = require('plugins.dap.python')
+
         require('dap.ext.vscode').load_launchjs()
     end
 }

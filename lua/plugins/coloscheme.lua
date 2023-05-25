@@ -38,6 +38,4 @@ local vscode = {
     end
 }
 
--- return gruvbox
--- return rosepine
 return vscode
