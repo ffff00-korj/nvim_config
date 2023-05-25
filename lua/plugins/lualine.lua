@@ -6,7 +6,9 @@ return {
     config = function()
         require('lualine').setup {
             options = {
-                theme = 'gruvbox-baby',
+                -- theme = 'gruvbox-baby',
+                -- @usage 'rose-pine' | 'rose-pine-alt'
+                theme = 'rose-pine-alt',
             },
         }
     end
