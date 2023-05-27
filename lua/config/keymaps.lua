@@ -9,5 +9,6 @@ vim.keymap.set('', '<C-j>', '<C-W>j')
 vim.keymap.set('', '<C-k>', '<C-W>k')
 vim.keymap.set('', '<C-h>', '<C-W>h')
 vim.keymap.set('', '<C-l>', '<C-W>l')
+-- Better split sizing
 vim.keymap.set('', '<C-p>', '<C-W>+')
 vim.keymap.set('', '<C-n>', '<C-W>-')
