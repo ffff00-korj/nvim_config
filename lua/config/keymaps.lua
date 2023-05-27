@@ -12,3 +12,6 @@ vim.keymap.set('', '<C-l>', '<C-W>l')
 -- Better split sizing
 vim.keymap.set('', '<C-p>', '<C-W>+')
 vim.keymap.set('', '<C-n>', '<C-W>-')
+-- Add split
+-- <C-W>s -- horisontal
+-- <C-W>v -- vertical
