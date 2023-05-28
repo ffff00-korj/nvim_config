@@ -6,15 +6,20 @@ return {
         'theHamsta/nvim-dap-virtual-text',
         'rcarriga/nvim-dap-ui',
         'stevearc/dressing.nvim',
+        'nvim-telescope/telescope.nvim',
     },
     keys = {
-        { '<leader>b',  ':DapToggleBreakpoint<CR>' },
-        { '<leader>B',  ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition > '))<CR>" },
-        { '<leader>lp', ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Breakpoint condition > '))<CR>" },
-        { '<F5>',       ':DapContinue<CR>' },
-        { '<F10>',      ':DapStepOver<CR>' },
-        { '<F11>',      ':DapStepInto<CR>' },
-        { '<F12>',      ':DapStepOut<CR>' },
+        { '<leader>b',   ':DapToggleBreakpoint<CR>' },
+        { '<leader>B',   ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition > '))<CR>" },
+        { '<leader>lp',  ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Breakpoint condition > '))<CR>" },
+        { '<F5>',        ':DapContinue<CR>' },
+        { '<F10>',       ':DapStepOver<CR>' },
+        { '<F11>',       ':DapStepInto<CR>' },
+        { '<F12>',       ':DapStepOut<CR>' },
+        -- telescope dap
+        { '<leader>pdc', '<Cmd>Telescope dap frames<CR>' },
+        { '<leader>pdb', '<Cmd>Telescope dap list_breakpoints<CR>' },
+        { '<leader>pdv', '<Cmd>Telescope dap variables<CR>' },
     },
     config = function()
         local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
@@ -25,6 +30,7 @@ return {
         dap.configurations.python = require('plugins.dap.python')
 
         require('dap.ext.vscode').load_launchjs()
-        require("nvim-dap-virtual-text").setup()
+        require('nvim-dap-virtual-text').setup()
+        require('plugins.dap.icons')
     end
 }

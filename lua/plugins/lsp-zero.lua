@@ -15,6 +15,7 @@ return {
         { 'L3MON4D3/LuaSnip' },
         { 'rafamadriz/friendly-snippets' },
         { 'onsails/lspkind-nvim' },
+        { 'rcarriga/cmp-dap' },
     },
     config = function()
         local lsp = require('lsp-zero')

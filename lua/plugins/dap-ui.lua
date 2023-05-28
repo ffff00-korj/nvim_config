@@ -7,7 +7,25 @@ return {
         { '<leader>dui', ':lua require("dapui").toggle()<CR>' },
     },
     config = function()
-        require('dapui').setup()
+        require('dapui').setup {
+            layouts = {
+                {
+                    elements = {
+                        "scopes",
+                        "watches",
+                    },
+                    size = 0.3,
+                    position = "left",
+                },
+                {
+                    elements = {
+                        "repl",
+                    },
+                    size = 0.3,
+                    position = "bottom",
+                },
+            },
+        }
 
         local dap, dapui = require("dap"), require("dapui")
         dap.listeners.after.event_initialized["dapui_config"] = function()
