@@ -1,7 +1,7 @@
 return {
     'rcarriga/nvim-dap-ui',
     dependencies = {
-        'mfussenegger/nvim-dap-python',
+        'mfussenegger/nvim-dap',
     },
     keys = {
         { '<leader>dui', ':lua require("dapui").toggle()<CR>' },
