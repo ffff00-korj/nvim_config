@@ -7,6 +7,10 @@ return {
         { 'nvim-treesitter/nvim-treesitter' },
         { 'rcarriga/nvim-dap-ui' }
     },
+    keys = {
+        { "<leader><leader>", "<cmd>Telescope buffers<cr>",                   desc = "Buffers" },
+        { "<leader>sb",       "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Buffer" },
+    },
     opts = function()
         return require('plugins.telescope.chad_config')
     end,
