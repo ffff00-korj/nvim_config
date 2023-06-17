@@ -13,6 +13,7 @@ return {
         { '<A-7>', '<Cmd>BufferLineGoToBuffer 7<CR>' },
         { '<A-8>', '<Cmd>BufferLineGoToBuffer 8<CR>' },
         { '<A-9>', '<Cmd>BufferLineGoToBuffer 9<CR>' },
+        { '<A-$>', '<Cmd>BufferLineGoToBuffer -1<CR>' },
         { '<A-,>', '<Cmd>BufferLineCyclePrev<CR>' },
         { '<A-.>', '<Cmd>BufferLineCycleNext<CR>' },
         { '<A-<>', '<Cmd>BufferLineMovePrev<CR>' },
