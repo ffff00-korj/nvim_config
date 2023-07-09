@@ -31,6 +31,5 @@ return {
 
         require('dap.ext.vscode').load_launchjs()
         require('nvim-dap-virtual-text').setup()
-        require('plugins.dap.icons')
     end
 }
