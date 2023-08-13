@@ -3,12 +3,15 @@ return {
     cmd = "Mason",
     opts = {
         ensure_installed = {
-            'pylsp',
+            'pyright',
             'json-lsp',
+            'html-lsp',
+            'css-lsp',
             'lua-language-server',
             'yaml-language-server',
 
             'black',
+            'isort',
             'djlint',
             'flake8',
             'pyflakes',
