@@ -19,19 +19,22 @@ return {
     },
     config = function()
         local lsp = require('lsp-zero')
+
         lsp.preset('recommended')
         lsp.on_attach(function(client, bufnr)
-            lsp.default_keymaps({ buffer = bufnr })
-
             local allow_format = { 'lua_ls', 'python' }
+
             if vim.tbl_contains(allow_format, client.name) then
                 require('lsp-format').on_attach(client)
             end
             lsp.buffer_autoformat()
+            lsp.default_keymaps({ buffer = bufnr })
         end)
+
         require('plugins.lsp.sign-icons')
         require('plugins.lsp.lsp-config')
         lsp.setup()
+
         require('plugins.lsp.cmp')
     end
 }
