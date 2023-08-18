@@ -2,13 +2,19 @@ local cmp = require('cmp')
 
 cmp.setup({
     window = {
-        completion = cmp.config.window.bordered(),
+        -- completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered({
+            winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
+        }),
+        completion = cmp.config.window.bordered({
+            winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
+        }),
     },
     mapping = {
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
     },
     formatting = {
-        fields = { 'abbr', 'kind', 'menu' },
+        fields = { 'kind', 'abbr', 'menu' },
         format = require('lspkind').cmp_format({
             mode = 'symbol',
             maxwidth = 50,
@@ -16,14 +22,15 @@ cmp.setup({
         })
     }
 })
-require("cmp").setup({
+
+cmp.setup({
     enabled = function()
         return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt"
             or require("cmp_dap").is_dap_buffer()
     end
 })
 
-require("cmp").setup.filetype({ "dap-repl", "dapui_watches", "dapui_hover" }, {
+cmp.setup.filetype({ "dap-repl", "dapui_watches", "dapui_hover" }, {
     sources = {
         { name = "dap" },
     },
