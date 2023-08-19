@@ -1,8 +1,9 @@
-local lsp = require('lsp-zero')
-lsp.set_sign_icons({
+local icons = {
     error = '',
     warning = '',
     hint = '',
     information = '',
     other = '﫠',
-})
+}
+
+return icons
