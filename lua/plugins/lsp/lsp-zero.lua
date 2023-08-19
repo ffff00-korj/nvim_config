@@ -30,7 +30,7 @@ local options = {
             lsp.buffer_autoformat()
             lsp.default_keymaps({ buffer = bufnr })
         end)
-        lsp.set_sign_icons(require('plugins.lsp.sign-icons'))
+        lsp.set_sign_icons(require('plugins.icons.sign-icons'))
         require('plugins.lsp.lsp-config')
         lsp.setup()
 
