@@ -29,7 +29,7 @@ local options = {
                 map('v', '<leader>hr', function() gs.reset_hunk { vim.fn.line('.'), vim.fn.line('v') } end)
                 map('n', '<leader>hS', gs.stage_buffer)
                 map('n', '<leader>hR', gs.reset_buffer)
-                map('n', '<leader>hp', gs.preview_hunk)
+                map('n', '<leader>hp', gs.preview_hunk_inline)
                 map('n', '<leader>hd', gs.diffthis)
                 map('n', '<leader>hD', function() gs.diffthis('~') end)
                 map('n', '<leader>td', gs.toggle_deleted)
