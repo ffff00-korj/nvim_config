@@ -1,4 +1,4 @@
-return {
+local options = {
     'ggandor/leap.nvim',
     dependencies = {
         'tpope/vim-repeat',
@@ -7,3 +7,5 @@ return {
         require('leap').add_default_mappings()
     end
 }
+
+return options

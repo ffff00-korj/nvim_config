@@ -1,4 +1,4 @@
-return {
+local options = {
     'nvim-treesitter/nvim-treesitter',
     build = ":TSUpdate",
     config = function()
@@ -13,3 +13,5 @@ return {
         }
     end
 }
+
+return options

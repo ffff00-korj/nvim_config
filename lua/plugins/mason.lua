@@ -1,4 +1,4 @@
-return {
+local options = {
     "williamboman/mason.nvim",
     cmd = "Mason",
     opts = {
@@ -21,3 +21,5 @@ return {
         },
     },
 }
+
+return options

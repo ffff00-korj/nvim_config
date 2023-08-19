@@ -1,4 +1,4 @@
-return {
+local options = {
     'lukas-reineke/indent-blankline.nvim',
     lazy = false,
     config = function()
@@ -12,3 +12,5 @@ return {
         }
     end
 }
+
+return options

@@ -1,4 +1,4 @@
-return {
+local options = {
     'theprimeagen/harpoon',
     config = function()
         local mark = require('harpoon.mark')
@@ -15,3 +15,5 @@ return {
         vim.keymap.set('n', '<C-6>', function() ui.nav_file(6) end)
     end
 }
+
+return options

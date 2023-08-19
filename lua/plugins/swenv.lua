@@ -1,4 +1,4 @@
-return {
+local options = {
     'AckslD/swenv.nvim',
     dependencies = {
         'stevearc/dressing.nvim',
@@ -12,3 +12,5 @@ return {
         })
     end
 }
+
+return options

@@ -1,4 +1,4 @@
-return {
+local config = {
     'nvim-telescope/telescope.nvim',
     lazy = false,
     name = 'telescope-plugin',
@@ -31,3 +31,5 @@ return {
         end)
     end,
 }
+
+return config

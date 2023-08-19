@@ -1,4 +1,4 @@
-return {
+local options = {
     'nvim-neotest/neotest',
     dependencies = {
         'nvim-neotest/neotest-python',
@@ -25,3 +25,5 @@ return {
         })
     end
 }
+
+return options

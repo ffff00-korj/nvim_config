@@ -1,4 +1,4 @@
-local config = {
+local debug_configurations = {
     {
         type = 'python',
         request = 'launch',
@@ -7,4 +7,4 @@ local config = {
     },
 }
 
-return config
+return debug_configurations

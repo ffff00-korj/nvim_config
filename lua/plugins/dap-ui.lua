@@ -1,4 +1,4 @@
-return {
+local options = {
     'rcarriga/nvim-dap-ui',
     dependencies = {
         'mfussenegger/nvim-dap',
@@ -64,3 +64,5 @@ return {
         })
     end
 }
+
+return options

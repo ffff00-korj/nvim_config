@@ -1,4 +1,4 @@
-return {
+local options = {
     'VonHeikemen/lsp-zero.nvim',
     lazy = false,
     dependencies = {
@@ -38,3 +38,5 @@ return {
         require('plugins.lsp.cmp')
     end
 }
+
+return options

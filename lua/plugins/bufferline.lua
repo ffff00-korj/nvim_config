@@ -1,4 +1,4 @@
-return {
+local options = {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
     version = "*",
@@ -32,15 +32,6 @@ return {
                 show_close_icon = false,
                 tab_size = 1,
                 max_name_length = 25,
-                -- offsets = {
-                --     {
-                --         filetype = "neo-tree",
-                --         text = "  Project",
-                --         highlight = "Directory",
-                --         text_align = "left",
-                --     },
-                -- },
-                -- modified_icon = "",
                 custom_areas = {
                     left = function()
                         return {
@@ -115,16 +106,9 @@ return {
                     fg = colors.bg,
                     bg = "",
                 },
-
-                -- indicator_visible = {
-                --   fg = colors.fg,
-                --   bg = colors.bg
-                -- },
-                -- indicator_selected = {
-                --   fg = colors.fg,
-                --   bg = colors.bg
-                -- },
             },
         })
     end,
 }
+
+return options

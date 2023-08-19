@@ -1,4 +1,4 @@
-return {
+local options = {
     'mfussenegger/nvim-dap',
     lazy = true,
     dependencies = {
@@ -33,3 +33,5 @@ return {
         require('nvim-dap-virtual-text').setup()
     end
 }
+
+return options
