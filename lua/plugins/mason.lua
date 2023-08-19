@@ -15,6 +15,7 @@ return {
             'djlint',
             'flake8',
             'pyflakes',
+            'stylua',
 
             'debugpy',
         },
