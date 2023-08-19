@@ -1,0 +1,31 @@
+{
+    "workspace.library": [
+        "/home/ilya/.config/nvim",
+        "/home/ilya/.local/share/nvim/lazy/lazy.nvim",
+        "/home/ilya/.local/share/nvim/lazy/cmp-dap",
+        "/home/ilya/.local/share/nvim/lazy/lspkind-nvim",
+        "/home/ilya/.local/share/nvim/lazy/friendly-snippets",
+        "/home/ilya/.local/share/nvim/lazy/LuaSnip",
+        "/home/ilya/.local/share/nvim/lazy/cmp-nvim-lua",
+        "/home/ilya/.local/share/nvim/lazy/cmp_luasnip",
+        "/home/ilya/.local/share/nvim/lazy/cmp-path",
+        "/home/ilya/.local/share/nvim/lazy/cmp-buffer",
+        "/home/ilya/.local/share/nvim/lazy/cmp-nvim-lsp",
+        "/home/ilya/.local/share/nvim/lazy/nvim-cmp",
+        "/home/ilya/.local/share/nvim/lazy/mason-lspconfig.nvim",
+        "/home/ilya/.local/share/nvim/lazy/mason.nvim",
+        "/home/ilya/.local/share/nvim/lazy/lsp-format.nvim",
+        "/home/ilya/.local/share/nvim/lazy/nvim-lspconfig",
+        "/home/ilya/.local/share/nvim/lazy/lsp-zero.nvim",
+        "/usr/share/nvim/runtime",
+        "/usr/lib/nvim",
+        "/home/ilya/.local/state/nvim/lazy/readme",
+        "/home/ilya/.local/share/nvim/lazy/cmp-dap/after",
+        "/home/ilya/.local/share/nvim/lazy/cmp-nvim-lua/after",
+        "/home/ilya/.local/share/nvim/lazy/cmp_luasnip/after",
+        "/home/ilya/.local/share/nvim/lazy/cmp-path/after",
+        "/home/ilya/.local/share/nvim/lazy/cmp-buffer/after",
+        "/home/ilya/.local/share/nvim/lazy/cmp-nvim-lsp/after",
+        "${3rd}/luassert/library"
+    ]
+}

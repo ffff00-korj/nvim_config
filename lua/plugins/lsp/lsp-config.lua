@@ -27,7 +27,7 @@ local function get_python_path(workspace)
     return vim.fn.exepath('python3') or vim.fn.exepath('python') or 'python'
 end
 
-require('lspconfig').pyright.setup({
+lspconfig.pyright.setup({
     before_init = function(_, config)
         local python_path = get_python_path(config.root_dir)
         config.settings.python.pythonPath = python_path
@@ -49,10 +49,28 @@ require('lspconfig').pyright.setup({
 })
 
 lspconfig.lua_ls.setup {
+    on_attach = function()
+        on_attach()
+        vim.cmd [[autocmd BufWritePre <buffer> lua require'stylua-nvim'.format_file()]]
+    end,
     settings = {
         Lua = {
+            runtime = {
+                version = 'LuaJIT',
+            },
             diagnostics = {
-                globals = { 'vim' },
+                globals = {
+                    'vim',
+                    'require',
+                    'on_attach',
+                },
+            },
+            workspace = {
+                library = vim.api.nvim_get_runtime_file("", true),
+                checkThirdParty = false,
+            },
+            telemetry = {
+                enable = false,
             },
         },
     },
