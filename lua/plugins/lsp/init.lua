@@ -1,3 +1,4 @@
+local a
 local plugins = {
     require('plugins.lsp.lsp-zero'),
     require('plugins.lsp.null-ls'),

@@ -31,9 +31,10 @@ local options = {
             lsp.default_keymaps({ buffer = bufnr })
         end)
         lsp.set_sign_icons(require('plugins.icons.sign-icons'))
-        require('plugins.lsp.lsp-config')
-        lsp.setup()
 
+        require('plugins.lsp.lsp-config')
+        require("plugins.colors.lsp")
+        lsp.setup()
         require('plugins.lsp.cmp')
     end
 }
