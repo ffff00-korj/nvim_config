@@ -1,9 +1,9 @@
 local debug_configurations = {
     {
-        type = 'python',
-        request = 'launch',
-        name = 'Launch file',
-        program = '${file}'
+        type = "python",
+        request = "launch",
+        name = "Launch file",
+        program = "${file}"
     },
 }
 

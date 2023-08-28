@@ -1,7 +1,7 @@
 local options = {
-    'mbbill/undotree',
+    "mbbill/undotree",
     keys = {
-        { '<leader>u', vim.cmd.UndotreeToggle },
+        { "<leader>u", vim.cmd.UndotreeToggle },
     },
 }
 

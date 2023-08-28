@@ -1,14 +1,14 @@
 local options = {
-    'AckslD/swenv.nvim',
+    "AckslD/swenv.nvim",
     dependencies = {
-        'stevearc/dressing.nvim',
+        "stevearc/dressing.nvim",
     },
     keys = {
-        { '<leader>dC', "<cmd>lua require('swenv.api').pick_venv()<cr>" },
+        { "<leader>dC", "<cmd>lua require('swenv.api').pick_venv()<cr>" },
     },
     config = function()
-        require('swenv').setup({
-            venvs_path = vim.fn.expand('~/.pyenv/versions/*/envs/')
+        require("swenv").setup({
+            venvs_path = vim.fn.expand("~/.pyenv/versions/*/envs/")
         })
     end
 }

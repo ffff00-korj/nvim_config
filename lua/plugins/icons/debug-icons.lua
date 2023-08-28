@@ -1,9 +1,9 @@
 local icons = {
-    breakpoint = '',
-    condution = '󰯲',
-    rejected = '',
-    logpoint = '󰰍',
-    stopped = '',
+    breakpoint = "",
+    condution = "󰯲",
+    rejected = "",
+    logpoint = "󰰍",
+    stopped = "",
 }
 
 return icons

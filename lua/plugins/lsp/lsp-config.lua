@@ -1,4 +1,4 @@
-local lspconfig = require('lspconfig')
+local lspconfig = require("lspconfig")
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -9,7 +9,7 @@ lspconfig.html.setup {
 
 lspconfig.pyright.setup({
     before_init = function(_, config)
-        local python_path = require('plugins.utils.python').get_python_path(config.root_dir)
+        local python_path = require("plugins.utils.python").get_python_path(config.root_dir)
         config.settings.python.pythonPath = python_path
         vim.g.python_host_prog = python_path
         vim.g.python3_host_prog = python_path
@@ -20,9 +20,9 @@ lspconfig.pyright.setup({
         python = {
             analysis = {
                 autoSearchPaths = true,
-                diagnosticMode = 'openFilesOnly',
+                diagnosticMode = "openFilesOnly",
                 useLibraryCodeForTypes = true,
-                typeCheckingMode = 'off',
+                typeCheckingMode = "off",
             },
         }
     },
@@ -31,18 +31,18 @@ lspconfig.pyright.setup({
 lspconfig.lua_ls.setup {
     on_attach = function()
         on_attach()
-        vim.cmd [[autocmd BufWritePre <buffer> lua require'stylua-nvim'.format_file()]]
+        vim.cmd [[autocmd BufWritePre <buffer> lua require("stylua-nvim").format_file()]]
     end,
     settings = {
         Lua = {
             runtime = {
-                version = 'LuaJIT',
+                version = "LuaJIT",
             },
             diagnostics = {
                 globals = {
-                    'vim',
-                    'require',
-                    'on_attach',
+                    "vim",
+                    "require",
+                    "on_attach",
                 },
             },
             workspace = {

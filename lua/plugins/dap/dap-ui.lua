@@ -1,13 +1,13 @@
 local options = {
-    'rcarriga/nvim-dap-ui',
+    "rcarriga/nvim-dap-ui",
     dependencies = {
-        'mfussenegger/nvim-dap',
+        "mfussenegger/nvim-dap",
     },
     keys = {
-        { '<leader>dui', ':lua require("dapui").toggle()<CR>' },
+        { "<leader>dui", ":lua require('dapui').toggle()<CR>" },
     },
     config = function()
-        require('dapui').setup {
+        require("dapui").setup {
             layouts = {
                 {
                     elements = {
@@ -42,23 +42,23 @@ local options = {
 
         require("plugins.colors.dap")
         local icons = require("plugins.icons.debug-icons")
-        vim.fn.sign_define('DapBreakpoint',
-            { text = icons.breakpoint, texthl = 'DapBreakpoint', linehl = 'DapBreakpoint', numhl = 'DapBreakpoint' })
-        vim.fn.sign_define('DapBreakpointCondition',
-            { text = icons.condution, texthl = 'DapBreakpoint', linehl = 'DapBreakpoint', numhl = 'DapBreakpoint' })
-        vim.fn.sign_define('DapBreakpointRejected',
-            { text = icons.rejected, texthl = 'DapBreakpoint', linehl = 'DapBreakpoint', numhl = 'DapBreakpoint' })
-        vim.fn.sign_define('DapLogPoint', {
+        vim.fn.sign_define("DapBreakpoint",
+            { text = icons.breakpoint, texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" })
+        vim.fn.sign_define("DapBreakpointCondition",
+            { text = icons.condution, texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" })
+        vim.fn.sign_define("DapBreakpointRejected",
+            { text = icons.rejected, texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" })
+        vim.fn.sign_define("DapLogPoint", {
             text = icons.logpoint,
-            texthl = 'DapLogPoint',
-            linehl = 'DapLogPoint',
-            numhl = 'DapLogPoint'
+            texthl = "DapLogPoint",
+            linehl = "DapLogPoint",
+            numhl = "DapLogPoint"
         })
-        vim.fn.sign_define('DapStopped', {
+        vim.fn.sign_define("DapStopped", {
             text = icons.stopped,
-            texthl = 'DapStopped',
-            linehl = 'DapStopped',
-            numhl = 'DapStopped'
+            texthl = "DapStopped",
+            linehl = "DapStopped",
+            numhl = "DapStopped"
         })
     end
 }

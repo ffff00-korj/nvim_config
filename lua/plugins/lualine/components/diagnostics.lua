@@ -1,12 +1,12 @@
 local icons = require("plugins.icons.sign-icons")
 
 return {
-    'diagnostics',
-    sections = { 'error', 'warn', 'info', 'hint', 'other', },
+    "diagnostics",
+    sections = { "error", "warn", "info", "hint", "other", },
     sources = { "nvim_diagnostic" },
     diagnostics_color = {
         -- rewrite hint separator color
-        hint = 'DiagnosticHint',
+        hint = "DiagnosticHint",
     },
     symbols = {
         error = icons.error .. " ",

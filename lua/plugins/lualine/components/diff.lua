@@ -2,8 +2,8 @@ local colors = require("plugins.colors.lualine")
 local conditions = require("plugins.utils.conditions")
 
 return {
-    'diff',
-    symbols = { added = ' ', modified = '󰝤 ', removed = ' ' },
+    "diff",
+    symbols = { added = " ", modified = "󰝤 ", removed = " " },
     diff_color = {
         added = { fg = colors.green },
         modified = { fg = colors.orange },

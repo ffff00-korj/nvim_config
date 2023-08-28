@@ -1,8 +1,8 @@
 local options = {
-    'tpope/vim-fugitive',
+    "tpope/vim-fugitive",
     keys = {
-        { '<leader>gs',  vim.cmd.Git },
-        { '<leader>gpp', '<cmd>Git push<CR>' },
+        { "<leader>gs",  vim.cmd.Git },
+        { "<leader>gpp", "<cmd>Git push<CR>" },
     },
 }
 

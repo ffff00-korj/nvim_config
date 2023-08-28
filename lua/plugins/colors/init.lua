@@ -1,5 +1,5 @@
 local plugins = {
-    require('plugins.colors.coloscheme'),
+    require("plugins.colors.coloscheme"),
 }
 
 return plugins

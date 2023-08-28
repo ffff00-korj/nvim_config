@@ -1,14 +1,15 @@
 local options = {
-    'nvim-neotest/neotest',
+    "nvim-neotest/neotest",
     dependencies = {
-        'nvim-neotest/neotest-python',
+        "nvim-neotest/neotest-python",
     },
     keys = {
-        { '<leader>dm', '<cmd>lua require("neotest").run.run()<cr>' },
-        { '<leader>dM', "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>" },
-        { '<leader>df', "<cmd>lua require('neotest').run.run({vim.fn.expand('%')})<cr>" },
-        { '<leader>dF', "<cmd>lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap'})<cr>" },
-        { '<leader>dS', "<cmd>lua require('neotest').summary.toggle()<cr>" },
+        { "<leader>dm",
+            "<cmd>lua require('                                                               neotest ').run.run()<cr>" },
+        { "<leader>dM", "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>" },
+        { "<leader>df", "<cmd>lua require('neotest').run.run({vim.fn.expand('%')})<cr>" },
+        { "<leader>dF", "<cmd>lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap'})<cr>" },
+        { "<leader>dS", "<cmd>lua require('neotest').summary.toggle()<cr>" },
     },
     config = function()
         require("neotest").setup({

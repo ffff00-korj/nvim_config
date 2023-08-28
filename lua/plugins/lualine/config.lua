@@ -1,7 +1,7 @@
 local config = {
     options = {
-        component_separators = '',
-        section_separators = '',
+        component_separators = "",
+        section_separators = "",
     },
     sections = {
         lualine_a = {},
@@ -30,14 +30,14 @@ end
 
 ins_left(require("plugins.lualine.components.separator"))
 ins_left(require("plugins.lualine.components.filename"))
-ins_left('location')
+ins_left("location")
 ins_left(require("plugins.lualine.components.branch"))
 ins_left(require("plugins.lualine.components.diagnostics"))
 
 -- middle separator
 ins_left(
     function()
-        return '%='
+        return "%="
     end
 )
 ins_left(require("plugins.lualine.components.lsp"))
