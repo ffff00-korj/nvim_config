@@ -1,3 +1,4 @@
+-- TODO setup
 local options = {
     'rmagatti/auto-session',
     config = function()
