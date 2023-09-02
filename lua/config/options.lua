@@ -23,7 +23,9 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
-
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "79"
+vim.cmd("set keymap=russian-jcukenwin")
+vim.cmd("set iminsert=0")
+vim.cmd("set imsearch=0")
