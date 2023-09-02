@@ -1,15 +1,16 @@
 # About
 My personal NeoVim configuration, written in lua. It contains:
-* Theme
+* Lazy
+* Custom bindings
+* VSCode theme and others
 * Lsp and lsp config
-* Treesitter
-* Telescope
-* Git intergration
-* God-loved harpoon
+* Custom lualine
+* Debugger for python
+* and more...
 
 ```sh
 # run NeoVim
 nvim .
 
-# type ':Lazy' abd 'I' to install plugins
+# type ':Lazy' abd 'I' to install plugins (it will be uploaded from github)
 ```
