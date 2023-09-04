@@ -38,4 +38,4 @@ local vscode = {
     end
 }
 
-return vscode
+return gruvbox

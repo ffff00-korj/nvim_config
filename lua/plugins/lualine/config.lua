@@ -34,14 +34,6 @@ ins_left("location")
 ins_left(require("plugins.lualine.components.branch"))
 ins_left(require("plugins.lualine.components.diagnostics"))
 
--- middle separator
-ins_left(
-    function()
-        return "%="
-    end
-)
-ins_left(require("plugins.lualine.components.lsp"))
-
 ins_right(require("plugins.lualine.components.encoding"))
 ins_right(require("plugins.lualine.components.diff"))
 ins_right(require("plugins.lualine.components.separator"))

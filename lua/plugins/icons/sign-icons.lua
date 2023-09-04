@@ -1,7 +1,7 @@
 local icons = {
     error = "󰅙",
     warn = "",
-    hint = "💡",
+    hint = "",
     info = "󰀨",
     other = "󰋗",
 }
