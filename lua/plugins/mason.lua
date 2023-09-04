@@ -7,6 +7,7 @@ local options = {
             "json-lsp",
             "html-lsp",
             "css-lsp",
+            "tsserver",
             "lua-language-server",
             "yaml-language-server",
 
