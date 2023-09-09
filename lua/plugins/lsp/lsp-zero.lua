@@ -21,12 +21,7 @@ local options = {
         local lsp = require("lsp-zero")
 
         lsp.preset("recommended")
-        lsp.on_attach(function(client, bufnr)
-            local allow_format = { "lua_ls", "python" }
-
-            if vim.tbl_contains(allow_format, client.name) then
-                require("lsp-format").on_attach(client)
-            end
+        lsp.on_attach(function(_, bufnr)
             lsp.buffer_autoformat()
             lsp.default_keymaps({ buffer = bufnr })
         end)
