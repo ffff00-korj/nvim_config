@@ -2,9 +2,7 @@ local options = {
     "nvim-telescope/telescope.nvim",
     dependencies = {
         { "nvim-lua/plenary.nvim" },
-        { "mfussenegger/nvim-dap" },
         { "nvim-treesitter/nvim-treesitter" },
-        { "rcarriga/nvim-dap-ui" },
     },
     keys = {
         { "<leader><leader>", "<cmd>Telescope buffers<cr>",                   desc = "Buffers" },
@@ -21,7 +19,6 @@ local options = {
     end,
     config = function(_, opts)
         require("telescope").setup(opts)
-        require("telescope").load_extension("dap")
 
 
         local builtin = require("telescope.builtin")
