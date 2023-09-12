@@ -20,7 +20,6 @@ local options = {
     config = function(_, opts)
         require("telescope").setup(opts)
 
-
         local builtin = require("telescope.builtin")
         vim.keymap.set("n", "<leader>pf", function() builtin.find_files() end, {})
         vim.keymap.set("n", "<leader>pg", function() builtin.git_files() end, {})
