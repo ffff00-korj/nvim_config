@@ -1,6 +1,6 @@
 local options = {
     "VonHeikemen/lsp-zero.nvim",
-    lazy = false,
+    lazy = true,
     dependencies = {
         { "neovim/nvim-lspconfig" },
         { "lukas-reineke/lsp-format.nvim" },

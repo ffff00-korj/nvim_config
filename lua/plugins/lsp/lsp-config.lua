@@ -1,23 +1,57 @@
-local cmp = require("cmp")
+local lspconfig = require("lspconfig")
 
-cmp.setup({
-    window = {
-        documentation = cmp.config.window.bordered({
-            winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None"
-        }),
-        completion = cmp.config.window.bordered({
-            winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None"
-        }),
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+lspconfig.html.setup {
+    capabilities = capabilities,
+}
+
+lspconfig.pyright.setup({
+    before_init = function(_, config)
+        local python_path = require("plugins.utils.python").get_python_path(config.root_dir)
+        config.settings.python.pythonPath = python_path
+        vim.g.python_host_prog = python_path
+        vim.g.python3_host_prog = python_path
+    end,
+    on_attach = on_attach,
+    settings = {
+        pyright = { autoImportCompletion = true, },
+        python = {
+            analysis = {
+                autoSearchPaths = true,
+                diagnosticMode = "openFilesOnly",
+                useLibraryCodeForTypes = true,
+                typeCheckingMode = "off",
+            },
+        }
     },
-    mapping = {
-        ["<CR>"] = cmp.mapping.confirm({ select = true }),
-    },
-    formatting = {
-        fields = { "kind", "abbr", "menu" },
-        format = require("lspkind").cmp_format({
-            mode = "symbol",
-            maxwidth = 50,
-            ellipsis_char = "...",
-        })
-    }
 })
+
+lspconfig.lua_ls.setup {
+    on_attach = function()
+        on_attach()
+        vim.cmd [[autocmd BufWritePre <buffer> lua require("stylua-nvim").format_file()]]
+    end,
+    settings = {
+        Lua = {
+            runtime = {
+                version = "LuaJIT",
+            },
+            diagnostics = {
+                globals = {
+                    "vim",
+                    "require",
+                    "on_attach",
+                },
+            },
+            workspace = {
+                library = vim.api.nvim_get_runtime_file("", true),
+                checkThirdParty = false,
+            },
+            telemetry = {
+                enable = false,
+            },
+        },
+    },
+}
