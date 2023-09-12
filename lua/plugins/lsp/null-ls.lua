@@ -7,18 +7,20 @@ local options = {
                 return venv_path .. "/bin"
             end
         end
-        local null_ls = require("null-ls")
-        local formatting = null_ls.builtins.formatting
-        local diagnostics = null_ls.builtins.diagnostics
-
-        null_ls.setup({
-            sources = {
-                formatting.isort.with({ prefer_local = python_env }),
-                formatting.black.with({ prefer_local = python_env }),
-                diagnostics.flake8.with({ prefer_local = python_env }),
-                diagnostics.mypy.with({ prefer_local = python_env }),
-            },
-        })
+        if pythonenv then
+            local null_ls = require("null-ls")
+            local formatting = null_ls.builtins.formatting
+            local diagnostics = null_ls.builtins.diagnostics
+            
+            null_ls.setup({
+                sources = {
+                    formatting.isort.with({ prefer_local = python_env }),
+                    formatting.black.with({ prefer_local = python_env }),
+                    diagnostics.flake8.with({ prefer_local = python_env }),
+                    diagnostics.mypy.with({ prefer_local = python_env }),
+                },
+            })
+        end
     end,
 }
 
