@@ -1,5 +1,5 @@
 local plugins = {
-    require("plugins.colors.colorscheme"),
+    require("plugins.colors.vscode"),
 }
 
 return plugins
