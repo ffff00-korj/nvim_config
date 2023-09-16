@@ -1,12 +1,12 @@
 # About
-My personal NeoVim configuration, written in lua. It contains:
-* Lazy
+My personal NeoVim configuration (minimalistic version), written in lua. It contains:
+* Lazy (greatest neovim package manager)
 * Custom bindings
-* VSCode theme and others
-* Lsp and lsp config
-* Custom lualine
-* Debugger for python
-* and more...
+* Treesitter for cool highlights
+* Lsp and lsp config (pyright and luals)
+* Git plugins and Undotree to work with changes
+* Python Linters and format on save
+* VSCode theme
 
 ```sh
 # run NeoVim
