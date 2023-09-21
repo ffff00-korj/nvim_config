@@ -1,5 +1,5 @@
 local plugins = {
-    require("plugins.colors.vscode"),
+    require("plugins.colors.zenbones"),
 }
 
 return plugins
