@@ -1,5 +1,5 @@
 local plugins = {
-    require("plugins.colors.zenbones"),
+    require("plugins.colors.rosepine"),
 }
 
 return plugins

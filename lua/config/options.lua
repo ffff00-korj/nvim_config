@@ -19,8 +19,6 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
-vim.cmd("set background=dark")
-vim.cmd("colorscheme zenbones")
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
