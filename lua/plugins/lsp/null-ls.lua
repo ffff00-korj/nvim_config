@@ -15,10 +15,12 @@ local options = {
         local diagnostics = null_ls.builtins.diagnostics
         null_ls.setup({
             sources = {
-                formatting.isort.with({ prefer_local = python_env }),
-                formatting.black.with({ prefer_local = python_env }),
-                diagnostics.flake8.with({ prefer_local = python_env }),
-                diagnostics.mypy.with({ prefer_local = python_env }),
+                formatting.isort,
+                formatting.black,
+                diagnostics.flake8,
+                diagnostics.mypy.with({
+                    extra_args = { "--ignore-missing-imports" },
+                }),
             },
         })
     end,
