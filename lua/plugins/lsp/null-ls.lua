@@ -12,6 +12,10 @@ local options = {
                 diagnostics.mypy.with({
                     extra_args = { "--ignore-missing-imports" },
                 }),
+
+                formatting.gofumpt,
+                formatting.goimports_reviser,
+                formatting.golines,
             },
         })
     end,

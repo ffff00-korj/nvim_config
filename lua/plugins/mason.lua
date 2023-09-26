@@ -4,22 +4,28 @@ local options = {
     opts = {
         ensure_installed = {
             "pyright",
-            "json-lsp",
-            "html-lsp",
-            "css-lsp",
-            "tsserver",
-            "lua-language-server",
-            "yaml-language-server",
-
             "black",
             "isort",
             "djlint",
             "flake8",
             "mypy",
             "pyflakes",
-            "stylua",
-
             "debugpy",
+
+            "gopls",
+            "gofumpt",
+            "goimports-reviser",
+            "golines",
+
+            "json-lsp",
+            "yaml-language-server",
+
+            "html-lsp",
+            "css-lsp",
+            "tsserver",
+
+            "lua-language-server",
+            "stylua",
         },
     },
 }

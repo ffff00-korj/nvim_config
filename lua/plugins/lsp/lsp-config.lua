@@ -1,6 +1,8 @@
 local lspconfig = require("lspconfig")
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+local util = require("lspconfig.util")
+
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 lspconfig.html.setup {
@@ -51,6 +53,24 @@ lspconfig.lua_ls.setup {
             },
             telemetry = {
                 enable = false,
+            },
+        },
+    },
+}
+
+
+lspconfig.gopls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    cmd = { "gopls" },
+    filetypes = { "go", "gomod", "gowork", "gotmpl" },
+    root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+    settings = {
+        gopls = {
+            completeUnimported = true,
+            usePlaceholders = true,
+            analyses = {
+                unusedparams = true,
             },
         },
     },
