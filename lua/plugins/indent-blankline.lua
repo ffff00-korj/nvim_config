@@ -1,12 +1,8 @@
 local options = {
     "lukas-reineke/indent-blankline.nvim",
-    lazy = false,
+    main = "ibl",
     config = function()
-        vim.opt.listchars:append "space:⋅"
-
-        require("indent_blankline").setup({
-            space_char_blankline = " ",
-        })
+        require("ibl").setup()
     end
 }
 
