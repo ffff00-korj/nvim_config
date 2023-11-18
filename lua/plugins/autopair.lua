@@ -1,5 +1,5 @@
 local options = {
-    "jiangmiao/auto-pairs",
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
 }
-
 return options
