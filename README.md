@@ -5,7 +5,7 @@ My personal NeoVim configuration (minimalistic version), written in lua. It cont
 * Treesitter for cool highlights
 * Lsp and lsp config (pyright and luals)
 * Git plugins and Undotree to work with changes
-* Python Linters and format on save
+* Python, Golang, Lua lsp setup with python venv, Linters and format on save
 * VSCode theme
 
 ```sh
