@@ -1,5 +1,5 @@
 local plugins = {
-    require("plugins.colors.github-theme"),
+    require("plugins.colors.fleet"),
 }
 
 return plugins
