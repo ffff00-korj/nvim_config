@@ -26,7 +26,7 @@ local options = {
         end)
         lsp.set_sign_icons()
 
-        require("plugins.lsp.lsp-config")
+        require("plugins.lsp.lspconfig")
         lsp.setup()
         require("plugins.lsp.cmp")
     end

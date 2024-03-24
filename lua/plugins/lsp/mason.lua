@@ -14,6 +14,7 @@ local options = {
 
             "gopls",
             "gofumpt",
+            "goimports",
             "goimports-reviser",
             "golines",
 
@@ -27,6 +28,7 @@ local options = {
             "lua-language-server",
             "stylua",
         },
+        automatic_installation = true,
     },
 }
 
