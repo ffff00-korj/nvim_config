@@ -15,6 +15,7 @@ local options = {
         { "L3MON4D3/LuaSnip" },
         { "rafamadriz/friendly-snippets" },
         { "onsails/lspkind-nvim" },
+        { "nanotee/sqls.nvim" },
     },
     config = function()
         local lsp = require("lsp-zero")

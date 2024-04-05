@@ -12,6 +12,12 @@ cmp.setup({
     mapping = {
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
     },
+    sources = {
+        { name = "nvim_lua" },
+        { name = "nvim_lsp" },
+        { name = "luasnip" },
+        { name = "vim-dadbod-completion" },
+    },
     formatting = {
         fields = { "kind", "abbr", "menu" },
         format = require("lspkind").cmp_format({
