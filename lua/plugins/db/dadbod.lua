@@ -1,5 +1,5 @@
 local options = {
-    "tpope/vim-dadbod",
+    "tpope/vim-dadbod", lazy = true,
 }
 
 return options
