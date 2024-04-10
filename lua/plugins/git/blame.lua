@@ -1,7 +1,7 @@
 local options = {
     "f-person/git-blame.nvim",
     keys = {
-        { "<leader>tb", "<Cmd>GitBlameToggle<CR>" },
+        { "<leader>Bt", "<Cmd>GitBlameToggle<CR>" },
     },
 }
 
