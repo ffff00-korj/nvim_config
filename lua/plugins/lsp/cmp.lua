@@ -3,10 +3,12 @@ local cmp = require("cmp")
 cmp.setup({
     window = {
         documentation = cmp.config.window.bordered({
-            winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None"
+            winhighlight = "Normal:None,FloatBorder:None,CursorLine:PmenuSel,Search:None",
+            border = "single", -- single|rounded|none
         }),
         completion = cmp.config.window.bordered({
-            winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None"
+            winhighlight = "Normal:None,FloatBorder:None,CursorLine:PmenuSel,Search:None",
+            border = "single", -- single|rounded|none
         }),
     },
     mapping = {
