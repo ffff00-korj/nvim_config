@@ -4,9 +4,9 @@ local options = {
     opts = {},
     config = function()
         require "lsp_signature".setup({
-            bind = true, -- This is mandatory, otherwise border config won't get registered.
+            bind = false,          -- This is mandatory, otherwise border config won't get registered.
             handler_opts = {
-                border = "rounded"
+                border = "single", -- single|rounded|none
             },
             hint_enable = false,
             -- hint_prefix = "Hint-> ",

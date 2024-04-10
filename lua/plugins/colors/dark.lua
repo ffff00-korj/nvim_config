@@ -6,7 +6,9 @@ local options = {
         vim.cmd('colorscheme dark')
         -- transparent background
         vim.cmd("hi Normal ctermbg=none guibg=none")
-        vim.cmd("hi Pmenu guibg=none guifg=none")
+        -- vim cmd bakground fix
+        vim.cmd("hi Pmenu guibg=none guifg=none")       -- menu
+        vim.cmd("hi FloatBorder guibg=none guifg=none") -- signature
         -- custom git signs
         vim.cmd("hi clear SignColumn")
         vim.cmd("hi DiffAdd guibg=none guifg=#26A269")
