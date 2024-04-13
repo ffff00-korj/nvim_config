@@ -15,7 +15,8 @@ local options = {
         vim.cmd("hi DiffChange guibg=none guifg=#61AFEF")
         vim.cmd("hi DiffDelete guibg=none guifg=#E06C75")
         vim.cmd("hi DiffText guibg=none guifg=gray")
-        vim.cmd("hi LineNr guibg=none guifg=#797979")
+        -- change line number font folor
+        vim.cmd("hi LineNr guifg=#797979")
     end
 }
 
