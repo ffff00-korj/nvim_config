@@ -23,6 +23,7 @@ local options = {
         local builtin = require("telescope.builtin")
         vim.keymap.set("n", "<leader>pf", function() builtin.find_files() end, {})
         vim.keymap.set("n", "<leader>pg", function() builtin.git_files() end, {})
+        vim.keymap.set("n", "<leader>gr", function() builtin.lsp_references() end, {})
         vim.keymap.set("n", "<leader>ps", function()
             builtin.grep_string({
                 search = vim.fn.input("grep < ")
