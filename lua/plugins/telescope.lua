@@ -28,6 +28,7 @@ local options = {
                 search = vim.fn.input("grep < ")
             });
         end)
+        vim.keymap.set("n", "<leader>vh", builtin.help_tags, {})
     end,
 }
 

@@ -9,10 +9,6 @@ local options =
         local dap = require "dap"
         require("nvim-dap-virtual-text").setup()
 
-        vim.keymap.set("n", "<F2>", function()
-            dap.terminate()
-        end, { desc = "Stop debugging" })
-
         vim.keymap.set("n", "<F5>", function()
             dap.continue()
         end, { desc = "Continue debugging" })

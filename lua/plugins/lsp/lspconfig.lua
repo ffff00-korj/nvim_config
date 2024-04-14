@@ -27,6 +27,7 @@ lspconfig.pyright.setup({
                 diagnosticMode = "off",
                 useLibraryCodeForTypes = true,
                 typeCheckingMode = "off",
+                reportUnusedVariable = "off",
             },
         }
     },
