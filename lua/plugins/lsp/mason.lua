@@ -23,7 +23,7 @@ local options = {
 
             "html-lsp",
             "css-lsp",
-            "tsserver",
+            "typescript-language-server",
 
             "lua-language-server",
             "stylua",
