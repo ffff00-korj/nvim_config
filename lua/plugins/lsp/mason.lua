@@ -17,6 +17,7 @@ local options = {
             "goimports",
             "goimports-reviser",
             "golines",
+            "delve",
 
             "json-lsp",
             "yaml-language-server",
