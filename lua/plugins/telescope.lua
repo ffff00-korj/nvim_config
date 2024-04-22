@@ -18,7 +18,9 @@ local options = {
         }
     end,
     config = function(_, opts)
-        require("telescope").setup(opts)
+        local telescope = require("telescope")
+        telescope.setup(opts)
+        telescope.load_extension('dap')
 
         local builtin = require("telescope.builtin")
         vim.keymap.set("n", "<leader>pf", function() builtin.find_files() end, {})
@@ -30,6 +32,10 @@ local options = {
             });
         end)
         vim.keymap.set("n", "<leader>ph", builtin.help_tags, {})
+        vim.keymap.set("n", "<leader>pdc", "<cmd>Telescope dap commands<cr>", {})
+        vim.keymap.set("n", "<leader>pdb", "<cmd>Telescope dap list_breakpoints<cr>", {})
+        vim.keymap.set("n", "<leader>pdv", "<cmd>Telescope dap variables<cr>", {})
+        vim.keymap.set("n", "<leader>pds", "<cmd>Telescope dap frames<cr>", {})
     end,
 }
 

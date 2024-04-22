@@ -6,6 +6,7 @@ local options =
     },
     lazy = true,
     config = function()
+        require('telescope').load_extension('dap')
         local dap = require "dap"
         require("nvim-dap-virtual-text").setup()
 
