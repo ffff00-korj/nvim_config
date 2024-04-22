@@ -6,7 +6,7 @@ local options = {
     },
     keys = {
         { "<leader><leader>", "<cmd>Telescope buffers<cr>",                   desc = "Buffers" },
-        { "<leader>sb",       "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Buffer" },
+        { "<leader>pb",       "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Buffer" },
     },
     opts = function()
         return {
@@ -23,13 +23,13 @@ local options = {
         local builtin = require("telescope.builtin")
         vim.keymap.set("n", "<leader>pf", function() builtin.find_files() end, {})
         vim.keymap.set("n", "<leader>pg", function() builtin.git_files() end, {})
-        vim.keymap.set("n", "<leader>gr", function() builtin.lsp_references() end, {})
+        vim.keymap.set("n", "<leader>pr", function() builtin.lsp_references() end, {})
         vim.keymap.set("n", "<leader>ps", function()
             builtin.grep_string({
                 search = vim.fn.input("grep < ")
             });
         end)
-        vim.keymap.set("n", "<leader>vh", builtin.help_tags, {})
+        vim.keymap.set("n", "<leader>ph", builtin.help_tags, {})
     end,
 }
 
