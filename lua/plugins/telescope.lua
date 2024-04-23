@@ -4,10 +4,6 @@ local options = {
         { "nvim-lua/plenary.nvim" },
         { "nvim-treesitter/nvim-treesitter" },
     },
-    keys = {
-        { "<leader><leader>", "<cmd>Telescope buffers<cr>",                   desc = "Buffers" },
-        { "<leader>pb",       "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Buffer" },
-    },
     opts = function()
         return {
             defaults = {
@@ -21,6 +17,9 @@ local options = {
         local telescope = require("telescope")
         telescope.setup(opts)
         telescope.load_extension('dap')
+
+        vim.keymap.set("n", "<leader><leader>", "<cmd>Telescope buffers<cr>", {})
+        vim.keymap.set("n", "<leader>pb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", {})
 
         local builtin = require("telescope.builtin")
         vim.keymap.set("n", "<leader>pf", function() builtin.find_files() end, {})
