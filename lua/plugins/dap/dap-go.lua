@@ -7,9 +7,11 @@ local options = {
     config = function()
         require("dap-go").setup()
 
-        vim.keymap.set("n", "<leader><leader>gdm", function()
+        vim.keymap.set("n", "<leader><leader>Dgt", function()
             require("dap-go").debug_test()
-        end)
+        end, {
+            desc = "[D]ebug [g]o [t]ests",
+        })
     end,
 }
 

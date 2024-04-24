@@ -17,13 +17,13 @@ local options = {
         vim.keymap.set("n", "<leader>Du", function()
             dapui.toggle { layout = 2 }
         end, {
-            desc = "Toggle Simple Debug ui, I mainly use it to run tests",
+            desc = "Toggle [D]ebug [u]I (only debug console and terminal)",
         })
 
         vim.keymap.set("n", "<leader>DU", function()
             dapui.toggle()
         end, {
-            desc = "Toggle Full Debug ui",
+            desc = "Toggle [D]ebug [U]I (full standart UI)",
         })
     end,
 }
