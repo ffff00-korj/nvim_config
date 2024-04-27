@@ -3,6 +3,7 @@ local options = {
     dependencies = {
         { "nvim-lua/plenary.nvim" },
         { "nvim-treesitter/nvim-treesitter" },
+        { "nvim-telescope/telescope-dap.nvim" },
     },
     opts = function()
         return {
