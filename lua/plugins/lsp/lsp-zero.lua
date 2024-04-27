@@ -21,7 +21,6 @@ local options = {
 
         lsp.preset("recommended")
         lsp.on_attach(function(_, bufnr)
-            lsp.buffer_autoformat()
             lsp.default_keymaps({ buffer = bufnr })
         end)
         lsp.set_sign_icons()
