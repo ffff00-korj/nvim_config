@@ -9,7 +9,7 @@ local options = {
                     opts = opts or {}
                     opts.buffer = bufnr
                 end
-                map("n", "<leader>hp", gs.preview_hunk_inline)
+                map("n", "<leader>hp", gs.preview_hunk_inline, { desc = "[h]unk [p]review inline" })
             end
         }
     end

@@ -6,8 +6,8 @@ local options = {
         require('venv-selector').setup({
             notify_user_on_activate = false,
         })
-        vim.keymap.set("n", "<leader>vf", "<cmd>:VenvSelect<cr>")
-        vim.keymap.set("n", "<leader>vs", "<cmd>:VenvSelectCached<cr>")
+        vim.keymap.set("n", "<leader>vf", "<cmd>:VenvSelect<cr>", { desc = "open menu to open [v]env" })
+        vim.keymap.set("n", "<leader>vs", "<cmd>:VenvSelectCached<cr>", { desc = "select [v]env from cache" })
     end,
 }
 

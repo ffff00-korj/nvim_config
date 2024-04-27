@@ -6,7 +6,6 @@ local options =
     },
     lazy = true,
     config = function()
-        require('telescope').load_extension('dap')
         local dap = require "dap"
         require("nvim-dap-virtual-text").setup()
 
@@ -37,14 +36,14 @@ local options =
         vim.keymap.set("n", "<leader>Db", function()
             dap.toggle_breakpoint()
         end, {
-            desc = "Toggle Debug breakpoint",
+            desc = "Toggle [D]ebug [b]reakpoint",
         })
 
         vim.keymap.set("n", "<leader>DB", function()
             local condition = vim.fn.input "Breakpoint condition: "
             dap.set_breakpoint(condition)
         end, {
-            desc = "Toggle Debug conditional Breakpoint",
+            desc = "Toggle [D]ebug conditional [B]reakpoint",
         })
     end,
 }
