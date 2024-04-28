@@ -9,8 +9,7 @@ local options = {
         "<leader>DU",
     },
     config = function()
-        print "dap"
-        local dapui = require "dapui"
+        local dapui = require("dapui")
 
         dapui.setup()
 
