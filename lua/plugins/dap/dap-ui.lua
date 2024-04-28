@@ -18,8 +18,8 @@ local options = {
                         "watches",
                         "scopes",
                     },
-                    size = 0.25,
-                    position = "right",
+                    size = 40,
+                    position = "left",
                 },
                 {
                     elements = {
