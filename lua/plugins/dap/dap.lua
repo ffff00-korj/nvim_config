@@ -10,6 +10,7 @@ local options =
         require("nvim-dap-virtual-text").setup()
 
         vim.keymap.set("n", "<F5>", function()
+            require('dap.ext.vscode').load_launchjs()
             dap.continue()
         end, { desc = "Continue debugging" })
 
