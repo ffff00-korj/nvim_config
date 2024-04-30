@@ -28,7 +28,7 @@ local options = {
         vim.cmd("hi DapUIStoppedThread guifg=gray")
         vim.cmd("hi DapUISource guifg=gray")
         vim.cmd("hi DapUILineNumber  guifg=#797979") -- from LineNr highlight
-        vim.cmd("hi DapUIFloatBorder guifg=none") -- standart border from cmp
+        vim.cmd("hi DapUIFloatBorder guibg=none guifg=none") -- standart border from cmp
         vim.cmd("hi DapUIWatchesEmpty guifg=gray")
         vim.cmd("hi DapUIWatchesValue guifg=gray")
         vim.cmd("hi DapUIWatchesError guifg=#F75464") -- error
