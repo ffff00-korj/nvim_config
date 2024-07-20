@@ -10,12 +10,6 @@ lspconfig.html.setup {
 }
 
 lspconfig.pyright.setup({
-    before_init = function(_, config)
-        local python_path = require("plugins.utils.python").get_python_path(config.root_dir)
-        config.settings.python.pythonPath = python_path
-        vim.g.python_host_prog = python_path
-        vim.g.python3_host_prog = python_path
-    end,
     on_attach = on_attach,
     settings = {
         pyright = {
@@ -34,10 +28,6 @@ lspconfig.pyright.setup({
 })
 
 lspconfig.lua_ls.setup {
-    on_attach = function()
-        on_attach()
-        vim.cmd [[autocmd BufWritePre <buffer> lua require("stylua-nvim").format_file()]]
-    end,
     settings = {
         Lua = {
             runtime = {
