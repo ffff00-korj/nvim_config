@@ -10,7 +10,7 @@ local options = {
         },
     },
     keys = {
-        { "<leader>pt", "<cmd>TroubleToggle<CR>", { desc = "[p]rocess [t]roubles" } }
+        { "<leader>pt", "<cmd>Trouble diagnostics toggle focus=true<cr>", { desc = "[p]rocess [t]roubles" } }
     },
 }
 
