@@ -24,7 +24,12 @@ local options = {
                 },
             },
             defaults = {
-                file_ignore_patterns = { ".git" },
+                file_ignore_patterns = {
+                    ".git",
+                    ".venv",
+                    "venv",
+                    "node_modules",
+                },
             },
         }
         telescope.load_extension('dap')
