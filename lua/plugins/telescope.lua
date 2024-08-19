@@ -16,7 +16,17 @@ local options = {
     end,
     config = function(_, opts)
         local telescope = require("telescope")
-        telescope.setup(opts)
+        telescope.setup {
+            opts = opts,
+            pickers = {
+                find_files = {
+                    hidden = true,
+                },
+            },
+            defaults = {
+                file_ignore_patterns = { ".git" },
+            },
+        }
         telescope.load_extension('dap')
 
         vim.keymap.set("n", "<leader><leader>", "<cmd>Telescope buffers<cr>", { desc = "Current opened buffers" })
