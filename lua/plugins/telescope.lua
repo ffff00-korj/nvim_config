@@ -28,6 +28,7 @@ local options = {
                     ".git",
                     ".venv",
                     "venv",
+                    ".mypy_cache",
                     "node_modules",
                 },
             },
