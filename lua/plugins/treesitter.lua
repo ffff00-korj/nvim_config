@@ -5,7 +5,20 @@ local options = {
     config = function()
         require('nvim-dap-repl-highlights').setup()
         require("nvim-treesitter.configs").setup {
-            ensure_installed = { "python", "javascript", "typescript", "c", "lua", "vim", "query", "http", "json", "dap_repl" },
+            ensure_installed = {
+                "python",
+                "javascript",
+                "typescript",
+                "c",
+                "lua",
+                "vim",
+                "query",
+                "http",
+                "json",
+                "dap_repl",
+                "markdown",
+                "markdown_inline",
+            },
             sync_install = false,
             auto_install = true,
             highlight = {
