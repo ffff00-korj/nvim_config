@@ -27,6 +27,9 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
+-- only for obsidian.nvim
+vim.opt.conceallevel= 2
+
 vim.cmd("set keymap=russian-jcukenwin")
 vim.cmd("set iminsert=0")
 vim.cmd("set imsearch=0")

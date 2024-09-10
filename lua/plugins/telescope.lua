@@ -30,6 +30,7 @@ local options = {
                     "venv",
                     ".mypy_cache",
                     "node_modules",
+                    ".trash",
                 },
             },
         }
