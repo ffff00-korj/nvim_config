@@ -1,4 +1,5 @@
 # About
+
 My personal NeoVim configuration (minimalistic version), written in lua. It contains:
 * Lazy (greatest neovim package manager)
 * Custom bindings
