@@ -45,9 +45,7 @@ local options = {
         vim.keymap.set("n", "<leader>pg", function() builtin.git_files() end, { desc = "[p]rocess [g]it files" })
         vim.keymap.set("n", "<leader>pr", function() builtin.lsp_references() end,
             { desc = "[p]rocess lsp_[r]eferences" })
-        vim.keymap.set("n", "<leader>ps", builtin.live_grep, {
-            desc = "[p]rocess grep [s]tring",
-        })
+        vim.keymap.set("n", "<leader>ps", builtin.live_grep, { desc = "[p]rocess grep [s]tring" })
         vim.keymap.set("n", "<leader>ph", builtin.help_tags, { desc = "[p]rocess [h]elp" })
         vim.keymap.set("n", "<leader>pdc", "<cmd>Telescope dap commands<cr>", { desc = "[p]rocess [d]ebug [c]ommands" })
         vim.keymap.set("n", "<leader>pdb", "<cmd>Telescope dap list_breakpoints<cr>",
