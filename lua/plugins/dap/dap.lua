@@ -16,14 +16,14 @@ local options =
             require('neominimap').off()
             dapui.open()
         end
-        dap.listeners.before.event_terminated.dapui_config = function()
-            require('neominimap').on()
-            dapui.close()
-        end
-        dap.listeners.before.event_exited.dapui_config = function()
-            require('neominimap').on()
-            dapui.close()
-        end
+        -- dap.listeners.before.event_terminated.dapui_config = function()
+        --     require('neominimap').on()
+        --     dapui.close()
+        -- end
+        -- dap.listeners.before.event_exited.dapui_config = function()
+        --     require('neominimap').on()
+        --     dapui.close()
+        -- end
         require("nvim-dap-virtual-text").setup()
 
         vim.keymap.set("n", "<F5>", function()
