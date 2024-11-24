@@ -10,7 +10,22 @@ local options = {
                 formatting.black,
                 diagnostics.flake8,
                 diagnostics.mypy.with({
-                    extra_args = { "--ignore-missing-imports" },
+                    args = function(params)
+                        return {
+                            -- standart args
+                            "--hide-error-codes",
+                            "--hide-error-context",
+                            "--no-color-output",
+                            "--show-absolute-path",
+                            "--show-column-numbers",
+                            "--show-error-codes",
+                            "--no-error-summary",
+                            "--no-pretty",
+                            params.temp_path,
+                            -- my args
+                            "--ignore-missing-imports",
+                        }
+                    end
                 }),
 
                 formatting.gofumpt,
