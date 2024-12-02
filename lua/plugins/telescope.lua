@@ -34,7 +34,7 @@ local options = {
                 },
             },
         }
-        telescope.load_extension('dap')
+        telescope.load_extension("dap")
 
         vim.keymap.set("n", "<leader><leader>", "<cmd>Telescope buffers<cr>", { desc = "Current opened buffers" })
         vim.keymap.set("n", "<leader>pb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", {
