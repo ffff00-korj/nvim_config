@@ -3,7 +3,7 @@ local options = {
     dependencies = { "LiadOz/nvim-dap-repl-highlights" },
     build = ":TSUpdate",
     config = function()
-        require('nvim-dap-repl-highlights').setup()
+        require("nvim-dap-repl-highlights").setup()
         require("nvim-treesitter.configs").setup {
             ensure_installed = {
                 "python",

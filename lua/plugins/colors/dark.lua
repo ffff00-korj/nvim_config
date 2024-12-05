@@ -3,7 +3,7 @@ local options = {
     lazy = false,
     config = function()
         -- setup colorscheme
-        vim.cmd('colorscheme dark')
+        vim.cmd("colorscheme dark")
         -- transparent background
         vim.cmd("hi Normal ctermbg=none guibg=none")
         -- vim cmd bakground fix

@@ -9,25 +9,25 @@ local options =
         local dap = require("dap")
         local dapui = require("dapui")
         dap.listeners.before.attach.dapui_config = function()
-            require('neominimap').off()
+            require("neominimap").off()
             dapui.open()
         end
         dap.listeners.before.launch.dapui_config = function()
-            require('neominimap').off()
+            require("neominimap").off()
             dapui.open()
         end
         -- dap.listeners.before.event_terminated.dapui_config = function()
-        --     require('neominimap').on()
+        --     require("neominimap").on()
         --     dapui.close()
         -- end
         -- dap.listeners.before.event_exited.dapui_config = function()
-        --     require('neominimap').on()
+        --     require("neominimap").on()
         --     dapui.close()
         -- end
         require("nvim-dap-virtual-text").setup()
 
         vim.keymap.set("n", "<F5>", function()
-            require('dap.ext.vscode').load_launchjs()
+            require("dap.ext.vscode").load_launchjs()
             dap.continue()
         end, { desc = "Continue debugging" })
 
