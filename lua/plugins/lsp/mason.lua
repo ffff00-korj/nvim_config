@@ -9,13 +9,11 @@ local options = {
         require("mason-tool-installer").setup {
             ensure_installed = {
                 "pyright",
-                "black",
-                "isort",
                 "djlint",
-                "flake8",
                 "mypy",
-                "pyflakes",
                 "debugpy",
+                "ruff",
+                "ruff-lsp",
 
                 "gopls",
                 "gofumpt",

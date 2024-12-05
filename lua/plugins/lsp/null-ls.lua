@@ -6,28 +6,7 @@ local options = {
         local diagnostics = null_ls.builtins.diagnostics
         null_ls.setup({
             sources = {
-                formatting.isort,
-                formatting.black,
-                diagnostics.flake8,
-                diagnostics.mypy.with({
-                    args = function(params)
-                        return {
-                            -- standart args
-                            "--hide-error-codes",
-                            "--hide-error-context",
-                            "--no-color-output",
-                            "--show-absolute-path",
-                            "--show-column-numbers",
-                            "--show-error-codes",
-                            "--no-error-summary",
-                            "--no-pretty",
-                            params.temp_path,
-                            -- my args
-                            "--ignore-missing-imports",
-                        }
-                    end
-                }),
-
+                diagnostics.mypy,
                 formatting.gofumpt,
                 formatting.goimports_reviser,
                 formatting.golines,

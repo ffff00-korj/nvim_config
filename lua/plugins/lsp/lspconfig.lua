@@ -1,31 +1,41 @@
 local lspconfig = require("lspconfig")
-
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-local util = require("lspconfig.util")
-
 capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-lspconfig.html.setup {
-    capabilities = capabilities,
-}
 
 lspconfig.pyright.setup({
     on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "python" },
     settings = {
         pyright = {
             autoImportCompletion = true,
         },
         python = {
             analysis = {
-                autoSearchPaths = true,
-                diagnosticMode = "off",
-                useLibraryCodeForTypes = true,
-                typeCheckingMode = "off",
-                reportUnusedVariable = "off",
+                -- Ignore all files for analysis
+                ignore = { "*" },
             },
         }
     },
 })
+
+local ruff_on_attach = function(client, bufnr)
+    if client.name == 'ruff' then
+        -- Disable hover in favor of Pyright
+        client.server_capabilities.hoverProvider = false
+    end
+end
+
+require('lspconfig').ruff.setup {
+    on_attach = ruff_on_attach,
+    filetypes = { "python" },
+    init_options = {
+        settings = {
+            args = {},
+            lineLenght = 79,
+        }
+    }
+}
 
 lspconfig.lua_ls.setup {
     settings = {
@@ -51,7 +61,7 @@ lspconfig.lua_ls.setup {
     },
 }
 
-
+local util = require("lspconfig.util")
 lspconfig.gopls.setup {
     on_attach = on_attach,
     capabilities = capabilities,
@@ -67,6 +77,10 @@ lspconfig.gopls.setup {
             },
         },
     },
+}
+
+lspconfig.html.setup {
+    capabilities = capabilities,
 }
 
 lspconfig.clangd.setup {
