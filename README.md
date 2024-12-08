@@ -28,4 +28,4 @@ run Neovim
 nvim .
 ```
 
-Then in neovim type ":Lazy" and "I" to install plugins (it will be uploaded from github)
+Then in neovim type ":Lazy" and "I"(shift-i) to install plugins (it will be uploaded from github)
