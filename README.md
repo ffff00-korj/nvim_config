@@ -8,7 +8,7 @@ My personal NeoVim configuration (minimalistic version), written in lua. It cont
 * Minimalistic lsp config
 * Git plugins and Undotree to work with changes
 
-### Hot to run
+## How to run
 
 Backup your old config
 
