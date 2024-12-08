@@ -12,5 +12,5 @@ My personal NeoVim configuration (minimalistic version), written in lua. It cont
 # run NeoVim
 nvim .
 
-# type ':Lazy' abd 'I' to install plugins (it will be uploaded from github)
+# type ":Lazy" abd "I" to install plugins (it will be uploaded from github)
 ```
