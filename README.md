@@ -10,21 +10,21 @@ My personal NeoVim configuration (minimalistic version), written in lua. It cont
 
 ### Hot to run
 
-backup your old config
+Backup your old config
 
-```sh
+```bash
 mv ~/.config/nvim ~/.config/nvim_bkp
 ```
 
-clone repo
+Clone repo
 
-```sh
+```bash
 git clone git@github.com:ffff00-korj/nvim_config.git nvim
 ```
 
-run Neovim
+Run Neovim
 
-```sh
+```bash
 nvim .
 ```
 
