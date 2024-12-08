@@ -1,4 +1,4 @@
-local options = {
+local opts = {
     "rmagatti/auto-session",
     lazy = false,
     config = function()
@@ -6,4 +6,4 @@ local options = {
     end
 }
 
-return options
+return opts

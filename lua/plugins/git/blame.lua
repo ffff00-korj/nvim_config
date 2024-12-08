@@ -1,8 +1,8 @@
-local options = {
+local opts = {
     "f-person/git-blame.nvim",
     keys = {
-        { "<leader>Bt", "<Cmd>GitBlameToggle<CR>", { desc = "git [B]lame [t]oggle" } },
+        { "<leader>bt", "<Cmd>GitBlameToggle<CR>", { desc = "git [B]lame [t]oggle" } },
     },
 }
 
-return options
+return opts

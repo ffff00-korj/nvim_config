@@ -1,4 +1,4 @@
-local options = {
+local opts = {
     "doums/dark.nvim",
     lazy = false,
     config = function()
@@ -48,4 +48,4 @@ local options = {
     end
 }
 
-return options
+return opts

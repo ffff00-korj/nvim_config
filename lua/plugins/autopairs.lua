@@ -1,5 +1,5 @@
-local options = {
+local opts = {
     "jiangmiao/auto-pairs",
 }
 
-return options
+return opts

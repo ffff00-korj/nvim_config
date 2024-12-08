@@ -1,8 +1,8 @@
-local options = {
+local plugins = {
     require("plugins.dap.dap"),
-    require("plugins.dap.dap-ui"),
-    require("plugins.dap.dap-go"),
-    require("plugins.dap.dap-py"),
+    require("plugins.dap.dapui"),
+    require("plugins.dap.dappy"),
+    require("plugins.dap.dapvirtualtext"),
 }
 
-return options
+return plugins

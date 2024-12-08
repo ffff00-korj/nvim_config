@@ -1,8 +1,8 @@
-local options = {
+local opts = {
     "numToStr/Comment.nvim",
     config = function()
         require("Comment").setup()
     end
 }
 
-return options
+return opts

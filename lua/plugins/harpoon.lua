@@ -1,6 +1,7 @@
-local options = {
+local opts = {
     "theprimeagen/harpoon",
     event = "VeryLazy",
+    dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
         local mark = require("harpoon.mark")
         local ui = require("harpoon.ui")
@@ -16,4 +17,4 @@ local options = {
     end,
 }
 
-return options
+return opts

@@ -1,4 +1,4 @@
-local options = {
+local opts = {
     "tpope/vim-fugitive",
     keys = {
         { "<leader>gs", vim.cmd.Git,         { desc = "[g]it [s]tatus" } },
@@ -6,4 +6,4 @@ local options = {
     },
 }
 
-return options
+return opts

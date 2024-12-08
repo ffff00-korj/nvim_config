@@ -1,4 +1,4 @@
-local options = {
+local opts = {
     "mbbill/undotree",
     event = "VeryLazy",
     keys = {
@@ -6,4 +6,4 @@ local options = {
     },
 }
 
-return options
+return opts

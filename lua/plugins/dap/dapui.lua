@@ -1,9 +1,8 @@
-local options = {
+local opts = {
     "rcarriga/nvim-dap-ui",
     dependencies = {
-        { "mfussenegger/nvim-dap" },
-        { "nvim-neotest/nvim-nio" },
-        { "folke/neodev.nvim" },
+        "mfussenegger/nvim-dap",
+        "nvim-neotest/nvim-nio",
     },
     keys = {
         "<leader>Du",
@@ -30,10 +29,6 @@ local options = {
                 },
             },
         }
-
-        require("neodev").setup({
-            library = { plugins = { "nvim-dap-ui" }, types = true },
-        })
 
         vim.keymap.set("n", "<leader>Du", function()
             dapui.toggle()
@@ -68,4 +63,4 @@ local options = {
     end,
 }
 
-return options
+return opts

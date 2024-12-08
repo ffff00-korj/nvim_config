@@ -1,4 +1,4 @@
-local options = {
+local opts = {
     "folke/trouble.nvim",
     dependencies = "nvim-tree/nvim-web-devicons",
     opts = {
@@ -14,4 +14,4 @@ local options = {
     },
 }
 
-return options
+return opts
