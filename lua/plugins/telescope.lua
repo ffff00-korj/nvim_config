@@ -5,10 +5,11 @@ local opts = {
         "nvim-treesitter/nvim-treesitter",
         "nvim-telescope/telescope-dap.nvim",
         "mfussenegger/nvim-dap",
-        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+        { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     },
     config = function(_, opts)
         local telescope = require("telescope")
+
         telescope.setup {
             opts = opts,
             pickers = {
@@ -26,7 +27,7 @@ local opts = {
                     ".trash",
                 },
                 mappings = {
-                    n = { ["q"] = require("telescope.actions").close },
+                    n = { ["q"] = telescope.actions.close },
                 },
                 extensions = {
                     fzf = {},
@@ -40,7 +41,9 @@ local opts = {
         vim.keymap.set("n", "<leader>pb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", {
             desc = "[p]rovide search in current [b]uffer",
         })
+
         local builtin = require("telescope.builtin")
+
         vim.keymap.set("n", "<leader>pf", function() builtin.find_files() end, { desc = "[p]rocess [f]iles" })
         vim.keymap.set("n", "<leader>pg", function() builtin.git_files() end, { desc = "[p]rocess [g]it files" })
         vim.keymap.set("n", "<leader>pr", function() builtin.lsp_references() end,
