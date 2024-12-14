@@ -9,3 +9,5 @@ vim.keymap.set("n", "n", "nzzzv", { desc = "Next search pattern" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Prev search pattern" })
 vim.keymap.set("n", "<A-c>", "<cmd>:bd<CR>", { desc = "Close cur buffer" })
 vim.keymap.set("v", "/", "\"fy/\\V<C-R>f<CR>", { desc = "Find selected words" })
+
+vim.keymap.set("i", "<C-y>", "<C-^>", { desc = "Change language to insert text" })
