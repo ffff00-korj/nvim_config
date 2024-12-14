@@ -19,7 +19,7 @@ local opts = {
         vim.cmd("hi LineNr guifg=#797979")
         -- dapui colors. get colors from https://github.com/doums/dark.nvim/blob/main/lua/dark/palette.lua
         vim.cmd("hi DapUIScope guifg=#20999D") -- type
-        vim.cmd("hi DapUIType guifg=#CF8E6D") -- keyword
+        vim.cmd("hi DapUIType guifg=#CF8E6D")  -- keyword
         vim.cmd("hi DapUIValue guifg=gray")
         vim.cmd("hi DapUIVariable guifg=gray")
         vim.cmd("hi DapUIModifiedValue guifg=gray")
@@ -27,7 +27,7 @@ local opts = {
         vim.cmd("hi DapUIThread guifg=gray")
         vim.cmd("hi DapUIStoppedThread guifg=gray")
         vim.cmd("hi DapUISource guifg=gray")
-        vim.cmd("hi DapUILineNumber  guifg=#797979") -- from LineNr highlight
+        vim.cmd("hi DapUILineNumber  guifg=#797979")         -- from LineNr highlight
         vim.cmd("hi DapUIFloatBorder guibg=none guifg=none") -- standart border from cmp
         vim.cmd("hi DapUIWatchesEmpty guifg=gray")
         vim.cmd("hi DapUIWatchesValue guifg=gray")

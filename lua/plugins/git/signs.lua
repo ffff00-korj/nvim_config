@@ -12,7 +12,7 @@ local opts = {
                 end
                 map("n", "<leader>hp", gs.preview_hunk_inline, { desc = "[h]unk [p]review inline" })
                 map("n", '<leader>hr', gs.reset_hunk, { desc = "[h]unk [r]eset" })
-                map('n', '<leader>hb', function() gs.blame_line{full=true} end)
+                map('n', '<leader>hb', function() gs.blame_line { full = true } end)
             end
         })
     end
