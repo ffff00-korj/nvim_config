@@ -34,7 +34,6 @@ local opts = {
                 },
             },
         }
-        telescope.load_extension("dap")
         telescope.load_extension("fzf")
 
         vim.keymap.set("n", "<leader><leader>", "<cmd>Telescope buffers<cr>", { desc = "Current opened buffers" })
@@ -43,13 +42,14 @@ local opts = {
         })
 
         local builtin = require("telescope.builtin")
-
         vim.keymap.set("n", "<leader>pf", function() builtin.find_files() end, { desc = "[p]rocess [f]iles" })
         vim.keymap.set("n", "<leader>pg", function() builtin.git_files() end, { desc = "[p]rocess [g]it files" })
         vim.keymap.set("n", "<leader>pr", function() builtin.lsp_references() end,
             { desc = "[p]rocess lsp_[r]eferences" })
         vim.keymap.set("n", "<leader>ps", builtin.live_grep, { desc = "[p]rocess grep [s]tring" })
         vim.keymap.set("n", "<leader>ph", builtin.help_tags, { desc = "[p]rocess [h]elp" })
+
+        telescope.load_extension("dap")
         vim.keymap.set("n", "<leader>pdc", "<cmd>Telescope dap commands<cr>", { desc = "[p]rocess [d]ebug [c]ommands" })
         vim.keymap.set("n", "<leader>pdb", "<cmd>Telescope dap list_breakpoints<cr>",
             { desc = "[p]rocess [d]ebug [b]reakpoints" })
