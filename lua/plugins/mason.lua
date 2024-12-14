@@ -1,4 +1,4 @@
-local options = {
+local opts = {
     "williamboman/mason.nvim",
     dependencies = {
         "WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -16,4 +16,4 @@ local options = {
     end
 }
 
-return options
+return opts
