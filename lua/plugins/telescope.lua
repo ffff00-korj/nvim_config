@@ -27,7 +27,7 @@ local opts = {
                     ".trash",
                 },
                 mappings = {
-                    n = { ["q"] = telescope.actions.close },
+                    n = { ["q"] = require("telescope.actions").close },
                 },
                 extensions = {
                     fzf = {},
