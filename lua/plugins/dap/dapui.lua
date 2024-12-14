@@ -4,11 +4,8 @@ local opts = {
         "mfussenegger/nvim-dap",
         "nvim-neotest/nvim-nio",
     },
-    keys = {
-        "<leader>Du",
-        "<leader>Dk",
-    },
     config = function()
+        ---@diagnostic disable: missing-fields
         local dapui = require("dapui")
         dapui.setup {
             layouts = {
@@ -56,7 +53,7 @@ local opts = {
             desc = "[D]ebug [t]oggle [w]atches",
         })
         vim.keymap.set("n", "<leader>Dtl", function()
-            dapui.float_element(nil, { enter = true })
+            dapui.float_element("", { enter = true })
         end, {
             desc = "[D]ebug [t]oggle [l]ist",
         })
