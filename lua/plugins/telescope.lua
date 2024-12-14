@@ -5,7 +5,10 @@ local opts = {
         "nvim-treesitter/nvim-treesitter",
         "nvim-telescope/telescope-dap.nvim",
         "mfussenegger/nvim-dap",
-        { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+        {
+            "nvim-telescope/telescope-fzf-native.nvim",
+            build = "make"
+        },
     },
     config = function(_, opts)
         local telescope = require("telescope")

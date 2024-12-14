@@ -1,7 +1,8 @@
 local opts = {
     "linux-cultist/venv-selector.nvim",
     dependencies = {
-        "neovim/nvim-lspconfig", "nvim-telescope/telescope.nvim"
+        "neovim/nvim-lspconfig",
+        "nvim-telescope/telescope.nvim",
     },
     event = "VeryLazy",
     ft = "python",

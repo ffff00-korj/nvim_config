@@ -32,7 +32,6 @@ local opts = {
             },
             formatting = {
                 fields = { "kind", "abbr", "menu" },
-                { name = "vim-dadbod-completion" },
                 format = require("lspkind").cmp_format({
                     mode = "symbol",
                     maxwidth = 50,
