@@ -1,12 +1,11 @@
-# About
+# Neovim config
 
-My personal NeoVim configuration (minimalistic version), written in lua. It contains:
-* Lazy
-* DAP
+My NeoVim config. It contains:
+* Lazy package manager
+* DAP or Debug agapter or Debugger
 * Custom bindings
-* Treesitter
 * Minimalistic lsp config
-* Git plugins and Undotree to work with changes
+* Git intergration and Undotree to work with changes
 
 ## How to run
 
