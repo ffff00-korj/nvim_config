@@ -8,6 +8,10 @@ My NeoVim config. It contains:
 * Git intergration and Undotree to work with changes
 * AI features (ollama)
 
+## Dependencies
+
+// TODO
+
 ## How to run
 
 Backup your old config
