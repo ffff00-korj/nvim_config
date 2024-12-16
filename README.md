@@ -1,12 +1,12 @@
 # Neovim config
 
 My NeoVim config. It contains:
-* Lazy package manager
-* DAP or Debug agapter or Debugger
+* Lazy Package Manager
+* DAP or Debug adapter or Debugger
 * Custom bindings
 * Minimalistic lsp config
-* Git intergration and Undotree to work with changes
-* AI features (ollama)
+* Git integration and Undotree to work with changes
+* AI features (Ollama)
 
 ## Dependencies
 
@@ -32,4 +32,4 @@ Run Neovim
 nvim .
 ```
 
-Then in neovim type ":Lazy" and "I"(shift-i) to install plugins (it will be uploaded from github)
+Then, in Neovim, type ":Lazy" and "I"(shift-i) to install plugins
