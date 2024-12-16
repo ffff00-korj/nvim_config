@@ -6,6 +6,7 @@ My NeoVim config. It contains:
 * Custom bindings
 * Minimalistic lsp config
 * Git intergration and Undotree to work with changes
+* AI features (ollama)
 
 ## How to run
 
