@@ -7,7 +7,7 @@ local opts = {
     event = "VeryLazy",
     ft = "python",
     config = function()
-        require('venv-selector').setup({
+        require("venv-selector").setup({
             notify_user_on_activate = false,
             stay_on_this_version = true,
         })
