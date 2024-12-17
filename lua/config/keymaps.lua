@@ -15,3 +15,6 @@ vim.keymap.set("n", "<M-k>", "<cmd>cprev<CR>", { desc = "Prev from quick fix lis
 vim.keymap.set("n", "<leader>so", "<cmd>source %<CR>", { desc = "Sourse file" })
 vim.keymap.set("n", "<leader>x", ":.lua<CR>", { desc = "Execute cur lua line" })
 vim.keymap.set("v", "<leader>x", ":lua<CR>", { desc = "Execute cur visual selection" })
+-- yank to clipboard
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Yank object to clipboard" })
+vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank line to clipboard" })
