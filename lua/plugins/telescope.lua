@@ -17,7 +17,7 @@ local opts = {
             opts = opts,
             defaults = vim.tbl_extend(
                 "force",
-                require('telescope.themes').get_ivy(),
+                require("telescope.themes").get_ivy(),
                 {
                     file_ignore_patterns = {
                         ".git",
@@ -38,6 +38,7 @@ local opts = {
         }
         telescope.load_extension("fzf")
 
+        ---@diagnostic disable: missing-fields
         vim.keymap.set("n", "<leader><leader>", "<cmd>Telescope buffers<cr>", { desc = "Current opened buffers" })
         vim.keymap.set("n", "<leader>pb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", {
             desc = "[p]rovide search in current [b]uffer",
@@ -59,6 +60,7 @@ local opts = {
             { desc = "[p]rocess [d]ebug [b]reakpoints" })
         vim.keymap.set("n", "<leader>pdv", "<cmd>Telescope dap variables<cr>", { desc = "[p]rocess [d]ebug [v]ariables" })
         vim.keymap.set("n", "<leader>pds", "<cmd>Telescope dap frames<cr>", { desc = "[p]rocess [d]ebug [s]tack" })
+        ---@diagnostic enable: missing-fields
     end,
 }
 

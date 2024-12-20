@@ -16,7 +16,7 @@ local opts = {
     },
     config = function()
         local lspconfig = require("lspconfig")
-        local capabilities = require('blink.cmp').get_lsp_capabilities()
+        local capabilities = require("blink.cmp").get_lsp_capabilities()
         lspconfig.lua_ls.setup {capabilities = capabilities}
         lspconfig.pyright.setup {capabilities = capabilities}
         lspconfig.ruff.setup {capabilities = capabilities}
