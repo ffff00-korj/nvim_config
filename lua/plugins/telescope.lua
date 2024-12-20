@@ -15,27 +15,26 @@ local opts = {
 
         telescope.setup {
             opts = opts,
-            pickers = {
-                find_files = {
-                    hidden = true,
-                },
-            },
-            defaults = {
-                file_ignore_patterns = {
-                    ".git",
-                    ".venv",
-                    "venv",
-                    ".mypy_cache",
-                    "node_modules",
-                    ".trash",
-                },
-                mappings = {
-                    n = { ["q"] = require("telescope.actions").close },
-                },
-                extensions = {
-                    fzf = {},
-                },
-            },
+            defaults = vim.tbl_extend(
+                "force",
+                require('telescope.themes').get_ivy(),
+                {
+                    file_ignore_patterns = {
+                        ".git",
+                        ".venv",
+                        "venv",
+                        ".mypy_cache",
+                        "node_modules",
+                        ".trash",
+                    },
+                    mappings = {
+                        n = { ["q"] = require("telescope.actions").close },
+                    },
+                    extensions = {
+                        fzf = {},
+                    },
+                }
+            ),
         }
         telescope.load_extension("fzf")
 
@@ -45,8 +44,10 @@ local opts = {
         })
 
         local builtin = require("telescope.builtin")
-        vim.keymap.set("n", "<leader>pf", function() builtin.find_files() end, { desc = "[p]rocess [f]iles" })
-        vim.keymap.set("n", "<leader>pg", function() builtin.git_files() end, { desc = "[p]rocess [g]it files" })
+        vim.keymap.set("n", "<leader>pf", function() builtin.find_files({ no_ignore = true }) end,
+            { desc = "[p]rocess [f]iles" })
+        vim.keymap.set("n", "<leader>pg", function() builtin.git_files({ no_ignore = true }) end,
+            { desc = "[p]rocess [g]it files" })
         vim.keymap.set("n", "<leader>pr", function() builtin.lsp_references() end,
             { desc = "[p]rocess lsp_[r]eferences" })
         vim.keymap.set("n", "<leader>ps", builtin.live_grep, { desc = "[p]rocess grep [s]tring" })
