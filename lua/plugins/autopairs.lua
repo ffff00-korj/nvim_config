@@ -1,5 +1,5 @@
 local opts = {
-    "jiangmiao/auto-pairs",
+  "jiangmiao/auto-pairs",
 }
 
 return opts
