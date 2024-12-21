@@ -1,3 +1,17 @@
+local function format()
+  if vim.bo.filetype == "lua" then
+    require("stylua-nvim").format_file()
+  elseif vim.bo.filetype == "python" then
+    vim.lsp.buf.code_action({
+      context = { only = { "source.organizeImports" } },
+      apply = true,
+    })
+    vim.lsp.buf.format()
+  else
+    vim.lsp.buf.format()
+  end
+end
+
 local opts = {
   "neovim/nvim-lspconfig",
   dependencies = {
@@ -31,13 +45,7 @@ local opts = {
     lspconfig.pyright.setup({ capabilities = capabilities })
     lspconfig.ruff.setup({ capabilities = capabilities })
 
-    vim.keymap.set("n", "<F3>", function()
-      if vim.bo.filetype == "lua" then
-        require("stylua-nvim").format_file()
-        return
-      end
-      vim.lsp.buf.format()
-    end, { desc = "Format current buffer" })
+    vim.keymap.set("n", "<F3>", format, { desc = "Format current buffer" })
   end,
 }
 
