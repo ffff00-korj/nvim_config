@@ -18,6 +18,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
     map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
     map("gi", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
+    map("ca", vim.lsp.buf.code_action, "Show [c]ode [a]ctions")
     map("<F2>", vim.lsp.buf.rename, "[R]e[n]ame")
 
     local client = vim.lsp.get_client_by_id(event.data.client_id)
