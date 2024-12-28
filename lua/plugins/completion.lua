@@ -7,6 +7,7 @@ local opts = {
   opts = {
     keymap = {
       preset = "super-tab",
+      ["<Enter>"] = { "accept" },
       ["<C-n>"] = { "scroll_documentation_down" },
       ["<C-p>"] = { "scroll_documentation_up" },
     },
@@ -21,6 +22,7 @@ local opts = {
         auto_show_delay_ms = 100,
       },
       ghost_text = { enabled = true },
+      accept = { auto_brackets = { enabled = true} },
     },
   },
 }
