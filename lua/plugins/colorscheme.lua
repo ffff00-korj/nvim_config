@@ -45,6 +45,7 @@ local opts = {
     vim.cmd("hi DapUIRestart guifg=gray")
     vim.cmd("hi DapUIUnavailable guifg=gray")
     vim.cmd("hi DapUIWinSelect guifg=gray")
+    vim.cmd("hi BlinkCmpGhostText guifg=gray") -- ghost text highlight for completion
   end,
 }
 
