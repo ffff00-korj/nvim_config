@@ -5,7 +5,8 @@ local opts = {
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
   opts = {
-    keymap = { preset = "super-tab",
+    keymap = {
+      preset = "super-tab",
       ["<C-n>"] = { "scroll_documentation_down" },
       ["<C-p>"] = { "scroll_documentation_up" },
     },
