@@ -7,7 +7,6 @@ local opts = {
   opts = {
     keymap = {
       preset = "super-tab",
-      ["<Enter>"] = { "accept" },
       ["<C-n>"] = { "scroll_documentation_down" },
       ["<C-p>"] = { "scroll_documentation_up" },
     },
