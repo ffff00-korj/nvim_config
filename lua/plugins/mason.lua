@@ -12,6 +12,7 @@ local opts = {
         "pyright",
         "debugpy",
         "ruff",
+        "html-lsp",
       },
     })
   end,
