@@ -8,11 +8,12 @@ local opts = {
     require("mason").setup()
     require("mason-tool-installer").setup({
       ensure_installed = {
+        "ruff",
+        "debugpy",
+        "html-lsp",
         "lua-language-server",
         "pyright",
-        "debugpy",
-        "ruff",
-        "html-lsp",
+        "stylua",
       },
     })
   end,
