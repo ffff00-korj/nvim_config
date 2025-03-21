@@ -45,6 +45,8 @@ local opts = {
     lspconfig.pyright.setup({ capabilities = capabilities })
     lspconfig.ruff.setup({ capabilities = capabilities })
     lspconfig.html.setup({ capabilities = capabilities })
+    lspconfig.ts_ls.setup({ capabilities = capabilities })
+    lspconfig.cssls.setup({ capabilities = capabilities })
 
     vim.keymap.set("n", "<F3>", format, { desc = "Format current buffer" })
   end,

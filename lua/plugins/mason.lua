@@ -14,6 +14,8 @@ local opts = {
         "lua-language-server",
         "pyright",
         "stylua",
+        "typescript-language-server",
+        "css-lsp",
       },
     })
   end,
