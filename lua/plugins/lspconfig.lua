@@ -42,7 +42,18 @@ local opts = {
         },
       },
     })
-    lspconfig.pyright.setup({ capabilities = capabilities })
+    lspconfig.pyright.setup({
+      capabilities = capabilities,
+      settings = {
+        python = {
+          analysis = {
+            diagnosticMode = "off",
+            typeCheckingMode = "off",
+            reportMissingImports = "none",
+          },
+        },
+      },
+    })
     lspconfig.ruff.setup({ capabilities = capabilities })
     lspconfig.html.setup({ capabilities = capabilities })
     lspconfig.ts_ls.setup({ capabilities = capabilities })
