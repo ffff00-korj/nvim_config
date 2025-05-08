@@ -1,4 +1,3 @@
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Open file tree" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Go way up" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Go way down" })
 vim.keymap.set("n", "n", "nzzzv", { desc = "Next search pattern" })
