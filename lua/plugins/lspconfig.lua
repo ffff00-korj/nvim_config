@@ -47,9 +47,8 @@ local opts = {
       settings = {
         python = {
           analysis = {
-            diagnosticMode = "off",
-            typeCheckingMode = "off",
-            reportMissingImports = "none",
+            diagnosticMode = "openFileOnly",
+            typeCheckingMode = "standart",
           },
         },
       },
