@@ -10,12 +10,14 @@ local opts = {
       ensure_installed = {
         "ruff",
         "debugpy",
-        "html-lsp",
-        "lua-language-server",
         "pyright",
+        "gopls",
+        "delve",
+        "lua-language-server",
         "stylua",
-        "typescript-language-server",
+        "html-lsp",
         "css-lsp",
+        "typescript-language-server",
       },
     })
   end,
