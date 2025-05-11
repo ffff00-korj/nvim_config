@@ -10,6 +10,7 @@ local opts = {
       ensure_installed = {
         "pyright",
         "debugpy",
+        "ruff",
         "gopls",
         "delve",
         "lua-language-server",

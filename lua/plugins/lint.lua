@@ -19,9 +19,9 @@ local opts = {
           end
         end
         return available
-      end)({ "mypy", "ruff", "black", "flake8", "isort" }),
+      end)({ "mypy", "ruff", "flake8", "isort" }),
     }
-    vim.api.nvim_create_autocmd({ "LspAttach", "BufWritePost", "InsertLeave" }, {
+    vim.api.nvim_create_autocmd({ "LspAttach", "TextChanged" }, {
       callback = function()
         require("lint").try_lint()
       end,

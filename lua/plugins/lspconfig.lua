@@ -14,6 +14,7 @@ local opts = {
         },
       },
     },
+    "mfussenegger/nvim-lint",
   },
   init = function()
     vim.api.nvim_create_autocmd("LspAttach", {
@@ -77,6 +78,14 @@ local opts = {
       },
     })
     lspconfig.gopls.setup({ capabilities = capabilities })
+    lspconfig.ruff.setup({
+      capabilities = capabilities,
+      init_options = {
+        settings = {
+          lint = { enable = false },
+        },
+      },
+    })
     lspconfig.bashls.setup({ capabilities = capabilities })
     lspconfig.html.setup({ capabilities = capabilities })
     lspconfig.ts_ls.setup({ capabilities = capabilities })
