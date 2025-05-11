@@ -50,11 +50,15 @@ local opts = {
         client.server_capabilities.documentRangeFormattingProvider = false
       end,
       capabilities = capabilities,
+      handlers = {
+        ["textDocument/publishDiagnostics"] = function() end,
+      },
       settings = {
         python = {
           analysis = {
-            diagnosticMode = "openFileOnly",
-            typeCheckingMode = "standart",
+            typeCheckingMode = "off",
+            diagnosticMode = "off",
+            linting = false,
           },
         },
       },
