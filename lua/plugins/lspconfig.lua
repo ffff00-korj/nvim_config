@@ -102,6 +102,7 @@ local opts = {
         vim.defer_fn(function()
           vim.lsp.buf.format()
         end, 100)
+        require("lint").try_lint()
       else
         vim.lsp.buf.format()
       end
