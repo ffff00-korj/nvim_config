@@ -21,7 +21,7 @@ local opts = {
             api_key = "TERM",
             name = "Ollama",
             end_point = "http://localhost:11434/v1/completions",
-            model = "qwen2.5-coder:7b",
+            model = "qwen2.5-coder:3b",
             optional = {
               max_tokens = 56,
               top_p = 0.9,
@@ -37,7 +37,7 @@ local opts = {
       { "<leader>op", "<CMD>Gen<CR>", "Open AI panel" },
     },
     opts = {
-      model = "qwen2.5-coder:7b",
+      model = "qwen2.5-coder:3b",
       display_mode = "vertical-split",
     },
   },
