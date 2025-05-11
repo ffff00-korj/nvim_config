@@ -3,10 +3,12 @@ local function format()
     require("stylua-nvim").format_file()
   elseif vim.bo.filetype == "python" then
     vim.lsp.buf.code_action({
-      context = { only = { "source.organizeImports" } },
+      context = { only = { "source.fixAll" } },
       apply = true,
     })
-    vim.lsp.buf.format()
+    vim.defer_fn(function()
+      vim.lsp.buf.format()
+    end, 100)
   else
     vim.lsp.buf.format()
   end
@@ -43,6 +45,10 @@ local opts = {
       },
     })
     lspconfig.pyright.setup({
+      on_attach = function(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
+      end,
       capabilities = capabilities,
       settings = {
         python = {

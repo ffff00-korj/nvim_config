@@ -20,12 +20,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("gi", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
     map("ca", vim.lsp.buf.code_action, "Show [c]ode [a]ctions")
     map("<F2>", vim.lsp.buf.rename, "[R]e[n]ame")
-
-    local client = vim.lsp.get_client_by_id(event.data.client_id)
-    if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
-      map("<leader>ht", function()
-        vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
-      end, "[T]oggle Inlay [H]ints")
-    end
+    map(
+      "<leader>ht",
+      (function(config)
+        local default, active = vim.diagnostic.config(), false
+        return function()
+          vim.diagnostic.config(active and default or config)
+          active = not active
+        end
+      end)({ virtual_text = false, virtual_lines = { current_line = true } }),
+      "[H]int [T]oggle"
+    )
   end,
 })
