@@ -64,7 +64,6 @@ local opts = {
       },
     })
     lspconfig.gopls.setup({ capabilities = capabilities })
-    lspconfig.ruff.setup({ capabilities = capabilities })
     lspconfig.html.setup({ capabilities = capabilities })
     lspconfig.ts_ls.setup({ capabilities = capabilities })
     lspconfig.cssls.setup({ capabilities = capabilities })

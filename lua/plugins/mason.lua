@@ -8,7 +8,7 @@ local opts = {
     require("mason").setup()
     require("mason-tool-installer").setup({
       ensure_installed = {
-        "ruff",
+        -- "ruff",
         "debugpy",
         "pyright",
         "gopls",
