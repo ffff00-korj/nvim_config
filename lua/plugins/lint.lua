@@ -19,7 +19,7 @@ local opts = {
           end
         end
         return available
-      end)({ "mypy", "ruff", "flake8", "isort" }),
+      end)({ "mypy", "flake8", "isort" }),
     }
     vim.api.nvim_create_autocmd({ "LspAttach", "TextChanged" }, {
       callback = function()
